@@ -11,8 +11,14 @@ end
 
 -- handles theme setup
 local function load_preferences()
-	local home = vim.fn.expand("$USERPROFILE")
-	local filepath = home .. "\\AppData\\Local\\nvim_preferences"
+	local filepath = ""
+
+	if vim.fn.has("win32") == 1 then
+		local home = vim.fn.expand("$USERPROFILE")
+		filepath = home .. "\\AppData\\Local\\nvim_preferences"
+	elseif vim.fn.has("linux") == 1 then
+		filepath = ".nvim_preferences"
+	end
 
 	local preferences = {}
 

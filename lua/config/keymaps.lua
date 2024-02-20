@@ -22,8 +22,12 @@ end
 local function save_preferences()
 	local bg = vim.o.bg
 	local colorscheme = vim.g.colors_name
-	local home = vim.fn.expand("$USERPROFILE")
-	vim.fn.writefile({ colorscheme, bg }, home .. "\\AppData\\Local\\nvim_preferences")
+	if vim.fn.has("win32") == 1 then
+		local home = vim.fn.expand("$USERPROFILE")
+		vim.fn.writefile({ colorscheme, bg }, home .. "\\AppData\\Local\\nvim_preferences")
+	elseif vim.fn.has("linux") == 1 then
+		vim.fn.writefile({ colorscheme, bg }, ".nvim_preferences")
+	end
 end
 
 function ToggleBackground()
