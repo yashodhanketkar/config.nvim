@@ -1,3 +1,14 @@
+-- handle file check
+local function file_exists(filepath)
+	local f = io.open(filepath, "r")
+	if f ~= nil then
+		io.close(f)
+		return true
+	else
+		return false
+	end
+end
+
 local function is_background_transparent()
 	-- gets curent background color
 	local normal_bg = vim.fn.synIDattr(vim.fn.hlID("Normal"), "bg")
@@ -22,12 +33,32 @@ end
 local function save_preferences()
 	local bg = vim.o.bg
 	local colorscheme = vim.g.colors_name
+	local filePath = ""
+
 	if vim.fn.has("win32") == 1 then
 		local home = vim.fn.expand("$USERPROFILE")
-		vim.fn.writefile({ colorscheme, bg }, home .. "\\AppData\\Local\\nvim_preferences")
+		filePath = home .. "\\AppData\\Local\\nvim_preferences"
 	elseif vim.fn.has("linux") == 1 then
-		vim.fn.writefile({ colorscheme, bg }, ".nvim_preferences")
+		local home = os.getenv("HOME")
+		filePath = home .. "/.nvim_preferences"
 	end
+
+	if not file_exists(filePath) then
+		os.execute("touch " .. filePath)
+	end
+
+	-- if not file_exists(filePath) then
+
+	-- local lines, err = vim.fn.readfile(filePath)
+
+	-- if err == nil and #lines == 2 then
+	-- 	preferences = { theme = lines[1], background = lines[2] }
+	-- end
+	-- else
+	-- preferences = { theme = "dracula", background = "dark" }
+	-- end
+
+	vim.fn.writefile({ colorscheme, bg }, filePath)
 end
 
 function ToggleBackground()

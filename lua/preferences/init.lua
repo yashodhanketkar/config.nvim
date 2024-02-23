@@ -17,7 +17,8 @@ local function load_preferences()
 		local home = vim.fn.expand("$USERPROFILE")
 		filepath = home .. "\\AppData\\Local\\nvim_preferences"
 	elseif vim.fn.has("linux") == 1 then
-		filepath = ".nvim_preferences"
+		local home = os.getenv("HOME")
+		filepath = home .. "/.nvim_preferences"
 	end
 
 	local preferences = {}
