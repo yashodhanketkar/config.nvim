@@ -148,7 +148,7 @@ These are my custom key mappings
 | `<leader>q`  | Saves and closes current changes in buffer |
 | `<leader>Q`  | Force close current buffer                 |
 | `<leader>v`  | Splits window vertically                   |
-| `<leader>h`  | Splits window horizontally                 |
+| `<leader>s`  | Splits window horizontally                 |
 | `<C-j>`      | Jump to lower window                       |
 | `<C-k>`      | Jump to upper window                       |
 | `<C-h>`      | Jump to left window                        |

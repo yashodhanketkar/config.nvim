@@ -18,8 +18,10 @@ return {
 				"flake8", -- python linter
 				"eslint_d", -- js linter
 				"rustfmt", -- rust formatter
-				"revive", -- go formatter
-				"golines",
+				"revive", -- go linter
+				"golines", -- go formatter
+				"clang-format", -- c formatter
+				"cpplint", -- c linter
 			},
 		})
 
@@ -44,6 +46,8 @@ return {
 				formatting.isort, -- python formatter (import sorter)
 				formatting.black, -- python formatter
 				formatting.golines,
+				formatting.clang_format,
+				diagnostics.cpplint,
 				diagnostics.flake8, -- python linter
 				diagnostics.revive, -- go linter
 				diagnostics.eslint_d.with({ -- js/ts linter
