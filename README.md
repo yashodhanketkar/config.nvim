@@ -19,6 +19,7 @@
       - [Neotree](#neotree)
       - [Surround](#surround)
       - [Telescope](#telescope)
+      - [Tmux Navigator](#tmux-navigator)
       - [TreeSitter](#treesitter)
     - [Tips](#tips)
   - [Installation](#installation)
@@ -105,6 +106,10 @@ This configuration uses this plugins:
 - [plenary](https://github.com/nvim-lua/plenary.nvim)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fd](https://github.com/sharkdp/fd)
+
+#### Tmux Navigator
+
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 
 #### TreeSitter
 
