@@ -19,10 +19,13 @@ return {
 					end,
 				},
 			},
+			window = {
+				position = "left",
+			},
 		})
 	end,
 	keys = {
-		{ "<C-n>", ":Neotree filesystem reveal right<cr>", desc = "Open Neotree on right side" },
+		{ "<C-n>", ":Neotree filesystem toggle<cr>", desc = "Toggles neotree" },
 		{ "<leader>bf", ":Neotree buffers reveal float<cr>", desc = "Shows Neotree buffers" },
 	},
 }

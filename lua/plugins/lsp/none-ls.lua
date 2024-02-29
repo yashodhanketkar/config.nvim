@@ -22,6 +22,8 @@ return {
 				"golines", -- go formatter
 				"clang-format", -- c formatter
 				"cpplint", -- c linter
+				"shellcheck", -- shell/bash linter
+				"shfmt", -- shell/bash formatter
 			},
 		})
 
@@ -45,9 +47,11 @@ return {
 				formatting.rustfmt, -- rust formatter
 				formatting.isort, -- python formatter (import sorter)
 				formatting.black, -- python formatter
-				formatting.golines,
-				formatting.clang_format,
-				diagnostics.cpplint,
+				formatting.golines, -- go formatter
+				formatting.clang_format, -- c/cpp formatter
+				formatting.shfmt, -- shell/bash formatter
+				diagnostics.cpplint, -- c/cpp linter
+				diagnostics.shellcheck, -- shell/bash  linter
 				diagnostics.flake8, -- python linter
 				diagnostics.revive, -- go linter
 				diagnostics.eslint_d.with({ -- js/ts linter

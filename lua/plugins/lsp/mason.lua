@@ -35,6 +35,8 @@ return {
 				"rust_analyzer",
 				"sqls",
 				"clangd",
+				"bashls",
+				"intelephense",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

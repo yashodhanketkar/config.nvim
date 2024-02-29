@@ -48,6 +48,7 @@ This configuration uses this plugins:
 #### Autopairs
 
 - [autopairs](https://github.com/windwp/nvim-autopairs)
+- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 
 #### Commentary
 
@@ -201,7 +202,7 @@ These are my custom key mappings
 | `K`                         | Show documentation for what is under cursor |
 | `<leader>rs`                | Restart LSP                                 |
 | **Neotree**                 |                                             |
-| `<C-n>`                     | Open Neotree on right side                  |
+| `<C-n>`                     | Toggles neotree window                      |
 | `<leader>bf`                | Shows Neotree buffers                       |
 | **Telescope**               |                                             |
 | `<leader>ff`                | Find and lists files by file name           |

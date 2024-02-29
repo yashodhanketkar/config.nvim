@@ -2,9 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
 	config = function()
-		local configs = require("nvim-treesitter.configs")
-
-		configs.setup({
+		require("nvim-treesitter.configs").setup({
 			ensure_installed = {
 				"c",
 				"lua",
@@ -21,10 +19,17 @@ return {
 				"yaml",
 				"prisma",
 				"go",
+				"php",
 			},
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },
+			autotag = {
+				enable = true,
+				enable_rename = true,
+				enable_close = true,
+				enable_close_on_slash = true,
+			},
 		})
 	end,
 }
