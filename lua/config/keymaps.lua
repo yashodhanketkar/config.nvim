@@ -26,6 +26,8 @@ function BackgroundTransparancy()
 			vim.cmd("hi Normal guibg=NONE ctermbg=NONE")
 			vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE")
 			vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE")
+			vim.cmd("hi NeotreeNormal guibg=NONE ctermbg=NONE")
+			vim.cmd("hi NeotreeNormalNC guibg=NONE ctermbg=NONE")
 		end
 	end
 end

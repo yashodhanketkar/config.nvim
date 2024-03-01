@@ -172,8 +172,8 @@ These are my custom key mappings
 | `<C-j>`                     | Move cursor to suggestion                   |
 | `<C-b>`                     | Scroll up signature docs                    |
 | `<C-f>`                     | Scroll down signature docs                  |
-| `<C-.>`                     | Show completion suggestion                  |
-| `<C-e>`                     | Close completion window                     |
+| `<C-e>`                     | Show completion suggestion                  |
+| `<C-q>`                     | Close completion window                     |
 | `<Tab>`                     | Confirm selection                           |
 | **Gitsigns**                |                                             |
 | `<leader>gs`                | Toggles git signs                           |
@@ -185,8 +185,6 @@ These are my custom key mappings
 | `<leader>h2`                | Selects second buffer from harpoons list    |
 | `<leader>h3`                | Selects third buffer from harpoons list     |
 | `<leader>h4`                | Selects fourth buffer from harpoons list    |
-| **Linter (nvim-lint)**      |                                             |
-| `<leader>l`                 | Turn on linting for current buffer          |
 | **LSP**                     |                                             |
 | `gR`                        | Show LSP references                         |
 | `gd`                        | Go to declaration                           |
@@ -202,7 +200,7 @@ These are my custom key mappings
 | `K`                         | Show documentation for what is under cursor |
 | `<leader>rs`                | Restart LSP                                 |
 | **Neotree**                 |                                             |
-| `<C-n>`                     | Toggles neotree window                      |
+| `<C-n>`                     | Open Neotree on left                        |
 | `<leader>bf`                | Shows Neotree buffers                       |
 | **Telescope**               |                                             |
 | `<leader>ff`                | Find and lists files by file name           |

@@ -4,6 +4,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
 	dependencies = {
 		"jay-babu/mason-null-ls.nvim",
+		"nvimtools/none-ls-extras.nvim",
 	},
 	config = function()
 		local mason_null_ls = require("mason-null-ls")
@@ -12,24 +13,15 @@ return {
 
 		mason_null_ls.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"black", -- python formatter
-				"flake8", -- python linter
-				"eslint_d", -- js linter
-				"rustfmt", -- rust formatter
-				"revive", -- go linter
-				"golines", -- go formatter
-				"clang-format", -- c formatter
-				"cpplint", -- c linter
-				"shellcheck", -- shell/bash linter
-				"shfmt", -- shell/bash formatter
+				"prettier",
+				"stylua",
+				"black",
+				"golines",
+				"clang-format",
+				"shfmt",
+				"pint",
 			},
 		})
-
-		-- for conciseness
-		local formatting = null_ls.builtins.formatting -- to setup formatters
-		local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 
 		-- to setup format on save
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -38,27 +30,15 @@ return {
 		null_ls.setup({
 			-- add package.json as identifier for root (for typescript monorepos)
 			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
-			-- setup formatters & linters
+			-- setup formatters
 			sources = {
-				--  to disable file types use
-				--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-				formatting.prettier, -- js/ts formatter
-				formatting.stylua, -- lua formatter
-				formatting.rustfmt, -- rust formatter
-				formatting.isort, -- python formatter (import sorter)
-				formatting.black, -- python formatter
-				formatting.golines, -- go formatter
-				formatting.clang_format, -- c/cpp formatter
-				formatting.shfmt, -- shell/bash formatter
-				diagnostics.cpplint, -- c/cpp linter
-				diagnostics.shellcheck, -- shell/bash  linter
-				diagnostics.flake8, -- python linter
-				diagnostics.revive, -- go linter
-				diagnostics.eslint_d.with({ -- js/ts linter
-					condition = function(utils)
-						return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-					end,
-				}),
+				null_ls.builtins.formatting.prettier,
+				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.black,
+				null_ls.builtins.formatting.golines,
+				null_ls.builtins.formatting.clang_format,
+				null_ls.builtins.formatting.shfmt,
+				null_ls.builtins.formatting.pint,
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)
