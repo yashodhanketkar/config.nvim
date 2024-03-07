@@ -35,6 +35,8 @@ return {
 				"rust_analyzer",
 				"sqls",
 				"clangd",
+				"bashls",
+				"intelephense",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed
@@ -44,10 +46,7 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
 				"black", -- python formatter
-				"flake8", -- python linter
-				"eslint_d", -- js linter
 				"golines",
 			},
 		})
