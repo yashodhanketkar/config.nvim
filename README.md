@@ -8,6 +8,7 @@
     - [Plugins](#plugins)
       - [Autocomplete](#autocomplete)
       - [Autopairs](#autopairs)
+      - [Bats](#bats)
       - [Commentary](#commentary)
       - [Folke](#folke)
       - [Fugitive](#fugitive)
@@ -49,6 +50,10 @@ This configuration uses this plugins:
 
 - [autopairs](https://github.com/windwp/nvim-autopairs)
 - [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+
+#### Bats
+
+- [Bats](https://github.com/aliou/bats.vim)
 
 #### Commentary
 

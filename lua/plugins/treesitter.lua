@@ -20,6 +20,7 @@ return {
 				"prisma",
 				"go",
 				"php",
+				"bash",
 			},
 			sync_install = false,
 			highlight = { enable = true },
