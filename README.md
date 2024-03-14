@@ -135,7 +135,7 @@ This configuration uses this plugins:
 
 For windows users:
 
-1. Create nvim folder inside ~User/AppData/Local/nvim
+1. Create nvim folder inside ~User/AppData/Local/nvim (windows) or ~/.config/nvim (linux)
 2. Clone this repository inside this folder via following command.
 
 ```bash
@@ -146,8 +146,8 @@ git clone https://github.com/yashodhanketkar/lou.nvim.git .
 4. Restart neovim again to apply new changes
 5. Add new plugins by creating new files inside lua/plugins/
 
-I don't use linux or mac, so just check nvim config location for those OS. After this follow the same steps as windows
-users.
+I don't use mac, so just check nvim config location for that OS. After this follow the same steps as windows
+or linux users.
 
 ## Key bindings
 
