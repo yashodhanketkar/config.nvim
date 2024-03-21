@@ -10,6 +10,8 @@
       - [Autopairs](#autopairs)
       - [Bats](#bats)
       - [Commentary](#commentary)
+      - [CSV](#csv)
+      - [Folds](#folds)
       - [Folke](#folke)
       - [Fugitive](#fugitive)
       - [Gitsigns](#gitsigns)
@@ -58,6 +60,15 @@ This configuration uses this plugins:
 #### Commentary
 
 - [Commentary](https://github.com/tpope/vim-commentary)
+
+#### CSV
+
+- [RainbowCSV](https://github.com/cameron-wags/rainbow_csv.nvim)
+
+#### Folds
+
+- [UFO folds](https://github.com/kevinhwang91/nvim-ufo)
+- [Promise/Async](https://github.com/kevinhwang91/promise-async)
 
 #### Folke
 
@@ -180,6 +191,9 @@ These are my custom key mappings
 | `<C-e>`                     | Show completion suggestion                  |
 | `<C-q>`                     | Close completion window                     |
 | `<Tab>`                     | Confirm selection                           |
+| **Folds**                   |                                             |
+| `zR`                        | Opens all folds                             |
+| `zM`                        | Closes all folds                            |
 | **Gitsigns**                |                                             |
 | `<leader>gs`                | Toggles git signs                           |
 | `<leader>gm`                | Toggles git blame                           |
