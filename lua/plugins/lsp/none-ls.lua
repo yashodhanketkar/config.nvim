@@ -19,7 +19,6 @@ return {
 				"golines",
 				"clang-format",
 				"shfmt",
-				"pint",
 			},
 		})
 
@@ -38,7 +37,6 @@ return {
 				null_ls.builtins.formatting.golines,
 				null_ls.builtins.formatting.clang_format,
 				null_ls.builtins.formatting.shfmt,
-				null_ls.builtins.formatting.pint,
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)

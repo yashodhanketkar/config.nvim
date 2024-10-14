@@ -49,7 +49,7 @@ This configuration uses this plugins:
 #### Autopairs
 
 - [autopairs](https://github.com/windwp/nvim-autopairs)
-- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+- [Autotags](https://github.com/windwp/nvim-ts-autotag)
 
 #### Bats
 
@@ -61,7 +61,7 @@ This configuration uses this plugins:
 
 #### Folke
 
-- [Folke](https://github.com/folke/neodev.nvim)
+- [Lazydev](https://github.com/folke/lazydev.nvim)
 - [whichkey](https://github.com/folke/which-key.nvim)
 
 #### Fugitive
