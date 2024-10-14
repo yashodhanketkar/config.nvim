@@ -31,18 +31,8 @@ return {
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
-				disable = { "csv" },
 			},
-			indent = {
-				enable = true,
-				disable = { "csv" },
-			},
-			autotag = {
-				enable = true,
-				enable_rename = true,
-				enable_close = true,
-				enable_close_on_slash = true,
-			},
+			indent = { enable = true },
 		})
 		vim.filetype.add({
 			extension = {
