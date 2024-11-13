@@ -33,7 +33,7 @@ local function load_preferences()
 		preferences = { theme = "dracula", background = "dark" }
 	end
 
-	vim.api.nvim_set_option("bg", preferences.background)
+	vim.api.nvim_set_option_value("bg", preferences.background, {})
 	vim.cmd("colorscheme " .. preferences.theme)
 	require("lualine").setup({
 		options = {

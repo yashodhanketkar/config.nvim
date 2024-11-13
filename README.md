@@ -19,9 +19,11 @@
       - [Identline](#identline)
       - [LSP](#lsp)
       - [Lualine](#lualine)
+      - [Limelight](#limelight)
       - [Neotree](#neotree)
       - [Surround](#surround)
       - [Telescope](#telescope)
+      - [Themes](#themes)
       - [Tmux Navigator](#tmux-navigator)
       - [TreeSitter](#treesitter)
     - [Tips](#tips)
@@ -106,6 +108,10 @@ This configuration uses this plugins:
 
 - [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
+#### Limelight
+
+- [Limelight](https://github.com/junegunn/limelight.vim)
+
 #### Neotree
 
 - [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim/tree/v3.x)
@@ -123,6 +129,12 @@ This configuration uses this plugins:
 - [plenary](https://github.com/nvim-lua/plenary.nvim)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fd](https://github.com/sharkdp/fd)
+
+#### Themes
+
+- [Dracula](https://github.com/Mofiqul/dracula.nvim)
+- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 #### Tmux Navigator
 
@@ -218,6 +230,8 @@ These are my custom key mappings
 | `]d"`                       | Go to next diagnostic                       |
 | `K`                         | Show documentation for what is under cursor |
 | `<leader>rs`                | Restart LSP                                 |
+| **Limelight**               |                                             |
+| `<leader>ll`                | Toggles limelight plugin                    |
 | **Neotree**                 |                                             |
 | `<C-n>`                     | Open Neotree on left                        |
 | `<leader>bf`                | Shows Neotree buffers                       |
