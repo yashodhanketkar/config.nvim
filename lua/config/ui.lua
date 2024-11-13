@@ -1,4 +1,4 @@
-local function setupui()
+local function setup_ui()
 	vim.cmd("set expandtab")
 	vim.cmd("set number relativenumber")
 	vim.cmd("set tabstop=2")
@@ -10,5 +10,5 @@ local function setupui()
 end
 
 return {
-	setup = setupui,
+	setup = setup_ui,
 }
