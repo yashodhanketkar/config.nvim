@@ -1,21 +1,6 @@
+local helper = require("themes.helper")
+local ui = require("themes.ui")
 local M = {}
-
-local themes = {
-	"dracula",
-	"gruvbox",
-	"kanagawa",
-}
-
--- handle file check
-local function file_exists(filepath)
-	local f = io.open(filepath, "r")
-	if f ~= nil then
-		io.close(f)
-		return true
-	else
-		return false
-	end
-end
 
 local function is_background_transparent()
 	-- gets curent background color
@@ -44,26 +29,6 @@ local function background_transparancy()
 	end
 end
 
-local function save_preferences()
-	local bg = vim.o.bg
-	local colorscheme = vim.g.colors_name
-	local filePath = ""
-
-	if vim.fn.has("win32") == 1 then
-		local home = vim.fn.expand("$USERPROFILE")
-		filePath = home .. "\\AppData\\Local\\nvim_preferences"
-	elseif vim.fn.has("linux") == 1 then
-		local home = os.getenv("HOME")
-		filePath = home .. "/.nvim_preferences"
-	end
-
-	if not file_exists(filePath) then
-		os.execute("touch " .. filePath)
-	end
-
-	vim.fn.writefile({ colorscheme, bg }, filePath)
-end
-
 function M.toggle_background()
 	local bg = vim.o.bg
 	local colorscheme = vim.g.colors_name
@@ -75,38 +40,28 @@ function M.toggle_background()
 		background_transparancy()
 	end
 
-	save_preferences()
+	helper.save_preferences()
 end
 
 function M.switch_theme()
 	local current_theme = vim.g.colors_name
 	local next_index = 1
 
-	for i, theme in ipairs(themes) do
+	for i, theme in ipairs(M.themes) do
 		if theme == current_theme then
-			next_index = (i % #themes) + 1
+			next_index = (i % #M.themes) + 1
 			break
 		end
 	end
 
-	local next_theme = themes[next_index]
-	vim.cmd("colorscheme " .. next_theme)
-
-	-- applies dark mode for dracula theme
-	if next_theme == "dracula" then
-		vim.api.nvim_set_option_value("bg", "dark", {})
-	end
-
-	-- changes lualine theme to match main theme
-	require("lualine").setup({
-		options = {
-			theme = next_theme,
-		},
-	})
-
-	save_preferences()
+	local next_theme = M.themes[next_index]
+	helper.apply_theme(next_theme)
 end
 
-return {
-	setup = M,
-}
+function M.theme_selector()
+	ui.select_theme_ui()
+end
+
+function M.setup() end
+
+return M

@@ -15,3 +15,4 @@ require("lazy").setup("plugins")
 
 -- get themes setup
 require("preferences").setup()
+require("themes").setup()
