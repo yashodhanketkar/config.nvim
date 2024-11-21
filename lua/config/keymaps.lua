@@ -1,4 +1,4 @@
-local themes = require("themes").setup
+local themes = require("themes")
 
 local function setup_keymaps()
 	-- custom keymaps
@@ -16,6 +16,7 @@ local function setup_keymaps()
 	-- custom keymaps with lua functions
 	vim.keymap.set("n", "<leader>bg", themes.toggle_background, { desc = "Toggle background" })
 	vim.keymap.set("n", "<leader>ts", themes.switch_theme, { desc = "Toggle colorscheme" })
+	vim.keymap.set("n", "<leader>th", themes.theme_selector, { desc = "Select colorscheme" })
 end
 
 return {
