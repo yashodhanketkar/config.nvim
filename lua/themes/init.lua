@@ -2,6 +2,12 @@ local helper = require("themes.helper")
 local ui = require("themes.ui")
 local M = {}
 
+local themes = {
+	"dracula",
+	"gruvbox",
+	"kanagawa",
+}
+
 local function is_background_transparent()
 	-- gets curent background color
 	local normal_bg = vim.fn.synIDattr(vim.fn.hlID("Normal"), "bg")
@@ -47,14 +53,14 @@ function M.switch_theme()
 	local current_theme = vim.g.colors_name
 	local next_index = 1
 
-	for i, theme in ipairs(M.themes) do
+	for i, theme in ipairs(themes) do
 		if theme == current_theme then
-			next_index = (i % #M.themes) + 1
+			next_index = (i % #themes) + 1
 			break
 		end
 	end
 
-	local next_theme = M.themes[next_index]
+	local next_theme = themes[next_index]
 	helper.apply_theme(next_theme)
 end
 

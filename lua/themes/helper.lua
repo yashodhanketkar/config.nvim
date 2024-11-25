@@ -1,11 +1,5 @@
 local M = {}
 
-M.themes = {
-	"dracula",
-	"gruvbox",
-	"kanagawa",
-}
-
 -- handle file check
 local function file_exists(filepath)
 	local f = io.open(filepath, "r")

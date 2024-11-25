@@ -1,6 +1,12 @@
 local helper = require("themes.helper")
 local M = {}
 
+local themes = {
+	"dracula",
+	"gruvbox",
+	"kanagawa",
+}
+
 function M.select_theme_ui()
 	local Popup = require("nui.popup")
 	local event = require("nui.utils.autocmd").event
@@ -18,21 +24,21 @@ function M.select_theme_ui()
 		position = "50%",
 		size = {
 			width = "50%",
-			height = #helper.themes,
+			height = #themes,
 		},
 	})
 
 	popup:mount()
 
 	local function handle_input(index)
-		if helper.themes[index] then
-			helper.apply_theme(helper.themes[index])
+		if themes[index] then
+			helper.apply_theme(themes[index])
 			popup:unmount()
 		end
 	end
 
 	-- Display themes as menu items
-	for i, theme in ipairs(helper.themes) do
+	for i, theme in ipairs(themes) do
 		vim.api.nvim_buf_set_lines(popup.bufnr, i - 1, i, false, { i .. ". " .. theme })
 	end
 

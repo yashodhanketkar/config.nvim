@@ -176,20 +176,22 @@ or linux users.
 
 These are my custom key mappings
 
-| Key bindings | Descriptions                               |
-| ------------ | ------------------------------------------ |
-| `<leader>w`  | Saves current changes in buffer            |
-| `<leader>q`  | Saves and closes current changes in buffer |
-| `<leader>Q`  | Force close current buffer                 |
-| `<leader>v`  | Splits window vertically                   |
-| `<leader>s`  | Splits window horizontally                 |
-| `<C-j>`      | Jump to lower window                       |
-| `<C-k>`      | Jump to upper window                       |
-| `<C-h>`      | Jump to left window                        |
-| `<C-l>`      | Jump to right window                       |
-| `<leader>bg` | Switch background color                    |
-| `<leader>ts` | Switch colorscheme                         |
-| `<leader>G`  | Starts Git command in terminal             |
+| Key bindings        | Descriptions                               |
+| ------------------- | ------------------------------------------ |
+| `<leader>w`         | Saves current changes in buffer            |
+| `<leader>q`         | Saves and closes current changes in buffer |
+| `<leader>Q`         | Force close current buffer                 |
+| `<leader>v`         | Splits window vertically                   |
+| `<leader>s`         | Splits window horizontally                 |
+| `<C-j>`             | Jump to lower window                       |
+| `<C-k>`             | Jump to upper window                       |
+| `<C-h>`             | Jump to left window                        |
+| `<C-l>`             | Jump to right window                       |
+| `<leader>bg`        | Switch background color                    |
+| `<leader>ts`        | Switch colorscheme                         |
+| `<leader>th`        | Select colorscheme via popup               |
+| `<leader>G`         | Starts Git command in terminal             |
+| `<leader><leader>n` | Clear highlights                           |
 
 ### Plugins specific
 
