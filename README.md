@@ -5,27 +5,6 @@
 - [Lou.nvim](#lounvim)
   - [Table of content](#table-of-content)
   - [Description](#description)
-    - [Plugins](#plugins)
-      - [Autocomplete](#autocomplete)
-      - [Autopairs](#autopairs)
-      - [Bats](#bats)
-      - [Commentary](#commentary)
-      - [CSV](#csv)
-      - [Folds](#folds)
-      - [Folke](#folke)
-      - [Fugitive](#fugitive)
-      - [Gitsigns](#gitsigns)
-      - [Harpoon](#harpoon)
-      - [Identline](#identline)
-      - [LSP](#lsp)
-      - [Lualine](#lualine)
-      - [Limelight](#limelight)
-      - [Neotree](#neotree)
-      - [Surround](#surround)
-      - [Telescope](#telescope)
-      - [Themes](#themes)
-      - [Tmux Navigator](#tmux-navigator)
-      - [TreeSitter](#treesitter)
     - [Tips](#tips)
   - [Installation](#installation)
   - [Key bindings](#key-bindings)
@@ -35,114 +14,6 @@
 ## Description
 
 Personal neovim configuration. Uses lazy.nvim for lazy loading and package management.
-
-### Plugins
-
-This configuration uses this plugins:
-
-#### Autocomplete
-
-- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
-- [cmp-path](https://github.com/hrsh7th/cmp-path)
-- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
-- [lspkind](https://github.com/onsails/lspkind.nvim)
-
-#### Autopairs
-
-- [autopairs](https://github.com/windwp/nvim-autopairs)
-- [Autotags](https://github.com/windwp/nvim-ts-autotag)
-
-#### Bats
-
-- [Bats](https://github.com/aliou/bats.vim)
-
-#### Commentary
-
-- [Commentary](https://github.com/tpope/vim-commentary)
-
-#### CSV
-
-- [RainbowCSV](https://github.com/cameron-wags/rainbow_csv.nvim)
-
-#### Folds
-
-- [UFO folds](https://github.com/kevinhwang91/nvim-ufo)
-- [Promise/Async](https://github.com/kevinhwang91/promise-async)
-
-#### Folke
-
-- [Lazydev](https://github.com/folke/lazydev.nvim)
-- [whichkey](https://github.com/folke/which-key.nvim)
-
-#### Fugitive
-
-- [Fugitive](https://github.com/tpope/vim-fugitive)
-
-#### Gitsigns
-
-- [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
-
-#### Harpoon
-
-- [Harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
-
-#### Identline
-
-- [Identline](https://github.com/lukas-reineke/indent-blankline.nvim)
-
-#### LSP
-
-- [lspconfig](https://github.com/neovim/nvim-lspconfig)
-- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
-- [nvim-lsp-file-operations](https://github.com/antosha417/nvim-lsp-file-operations)
-- [mason](https://github.com/williamboman/mason.nvim)
-- [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-- [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
-- [none-ls](https://github.com/nvimtools/none-ls.nvim)
-- [mason-null-lsp](https://github.com/jay-babu/mason-null-ls.nvim)
-
-#### Lualine
-
-- [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-
-#### Limelight
-
-- [Limelight](https://github.com/junegunn/limelight.vim)
-
-#### Neotree
-
-- [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim/tree/v3.x)
-- [plenary](https://github.com/nvim-lua/plenary.nvim)
-- [devicons](https://github.com/nvim-tree/nvim-web-devicons)
-- [nui](https://github.com/MunifTanjim/nui.nvim)
-
-#### Surround
-
-- [Surround](https://github.com/tpope/vim-surround)
-
-#### Telescope
-
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
-- [plenary](https://github.com/nvim-lua/plenary.nvim)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [fd](https://github.com/sharkdp/fd)
-
-#### Themes
-
-- [Dracula](https://github.com/Mofiqul/dracula.nvim)
-- [Gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
-- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
-
-#### Tmux Navigator
-
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
-
-#### TreeSitter
-
-- [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 ### Tips
 
@@ -232,6 +103,7 @@ These are my custom key mappings
 | `]d"`                       | Go to next diagnostic                       |
 | `K`                         | Show documentation for what is under cursor |
 | `<leader>rs`                | Restart LSP                                 |
+| `<leader>fc`                | Enters FzfLua command from manual input     |
 | **Limelight**               |                                             |
 | `<leader>ll`                | Toggles limelight plugin                    |
 | **Neotree**                 |                                             |
