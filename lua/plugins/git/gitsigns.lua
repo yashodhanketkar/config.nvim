@@ -16,9 +16,9 @@ return {
 		end
 		map("<leader>gm", function()
 			gitsigns.toggle_current_line_blame()
-		end)
+		end, { desc = "Toggles git blames" })
 		map("<leader>gs", function()
 			gitsigns.toggle_signs()
-		end)
+		end, { desc = "Toggles gitsigns" })
 	end,
 }

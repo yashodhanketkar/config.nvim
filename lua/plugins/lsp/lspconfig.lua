@@ -6,10 +6,8 @@ return {
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 	},
 	config = function()
-		-- import lspconfig plugin
 		local lspconfig = require("lspconfig")
 
-		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 		local keymap = vim.keymap -- for conciseness
@@ -76,12 +74,6 @@ return {
 			on_attach = on_attach,
 		})
 
-		-- configure typescript server with plugin
-		-- lspconfig["tsserver"].setup({
-		-- 	capabilities = capabilities,
-		-- 	on_attach = on_attach,
-		-- })
-
 		-- configure css server
 		lspconfig["cssls"].setup({
 			capabilities = capabilities,
@@ -109,6 +101,11 @@ return {
 
 		-- configure python server
 		lspconfig["pylsp"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		lspconfig["basedpyright"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 		})
@@ -143,7 +140,7 @@ return {
 			on_attach = on_attach,
 		})
 
-		-- configure C server
+		-- configure bash server
 		lspconfig["bashls"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,

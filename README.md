@@ -214,10 +214,10 @@ These are my custom key mappings
 | **Harpoon**                 |                                             |
 | `<leader>ha`                | Add buffer to the harpoon                   |
 | `<leader>hm`                | Opens harpoons quick menu UI                |
-| `<leader>h1`                | Selects first buffer from harpoons list     |
-| `<leader>h2`                | Selects second buffer from harpoons list    |
-| `<leader>h3`                | Selects third buffer from harpoons list     |
-| `<leader>h4`                | Selects fourth buffer from harpoons list    |
+| `<A-1>`                     | Selects first buffer from harpoons list     |
+| `<A-2>`                     | Selects second buffer from harpoons list    |
+| `<A-3>`                     | Selects third buffer from harpoons list     |
+| `<A-4>`                     | Selects fourth buffer from harpoons list    |
 | **LSP**                     |                                             |
 | `gR`                        | Show LSP references                         |
 | `gd`                        | Go to declaration                           |
