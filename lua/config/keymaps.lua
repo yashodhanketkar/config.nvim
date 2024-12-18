@@ -13,6 +13,7 @@ local function setup_keymaps()
 	vim.cmd("map <c-l> <c-w>l")
 	vim.cmd("map <leader>G :Git ")
 	vim.cmd("map <leader><leader>n :noh<cr>")
+	vim.cmd("map <leader><leader>wk :WhichKey<cr>")
 
 	-- custom keymaps with lua functions
 	vim.keymap.set("n", "<leader>bg", themes.toggle_background, { desc = "Toggle background" })
