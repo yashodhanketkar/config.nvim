@@ -1,12 +1,7 @@
 local helper = require("themes.helper")
 local ui = require("themes.ui")
+local themes = require("themes.data").themes
 local M = {}
-
-local themes = {
-	"dracula",
-	"gruvbox",
-	"kanagawa",
-}
 
 local function is_background_transparent()
 	-- gets curent background color
@@ -41,7 +36,8 @@ function M.toggle_background()
 
 	-- apply light mode for themes except dracula
 	if colorscheme ~= "dracula" then
-		vim.api.nvim_set_option_value("bg", bg == "dark" and "light" or "dark", {})
+		local newBg = bg == "dark" and "light" or "dark"
+		vim.api.nvim_set_option_value("bg", newBg, {})
 	else
 		background_transparancy()
 	end

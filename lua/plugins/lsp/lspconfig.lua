@@ -12,6 +12,7 @@ return {
 			sqls = {},
 			clangd = {},
 			bashls = {},
+			ts_ls = {},
 		},
 	},
 	config = function(_, opts)
@@ -31,7 +32,7 @@ return {
 			capabilities = capabilities,
 			settings = {
 				Lua = {
-					diagnostic = {
+					diagnostics = {
 						globals = { "vim" },
 					},
 					workspace = {

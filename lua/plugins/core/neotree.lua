@@ -6,7 +6,7 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		"MunifTanjim/nui.nvim",
 	},
-	config = function()
+	init = function()
 		require("neo-tree").setup({
 			event_handlers = {
 				{
