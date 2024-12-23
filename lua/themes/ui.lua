@@ -1,55 +1,51 @@
 local helper = require("themes.helper")
+local themes = require("themes.data").themes
 local M = {}
 
-local themes = {
-	"dracula",
-	"gruvbox",
-	"kanagawa",
-}
-
 function M.select_theme_ui()
-	local Popup = require("nui.popup")
-	local event = require("nui.utils.autocmd").event
+	local Menu = require("nui.menu")
 
-	local popup = Popup({
-		enter = true,
-		focusable = true,
+	-- Store themes inside menu list
+	local themeOptions = {}
+	for _, theme in ipairs(themes) do
+		table.insert(themeOptions, Menu.item(theme))
+	end
+
+	-- handle selector theme change
+	local function handle_input(theme)
+		helper.apply_theme(theme)
+	end
+
+	local menu = Menu({
+		position = "50%",
+		relative = "editor",
+		size = {
+			width = 25,
+			height = #themes,
+		},
 		border = {
 			style = "rounded",
 			text = {
-				top = " Select Theme ",
-				top_align = "right",
+				top = " Select theme ",
+				top_align = "left",
 			},
 		},
-		position = "50%",
-		size = {
-			width = "50%",
-			height = #themes,
+	}, {
+		lines = themeOptions,
+		max_width = 20,
+		keymap = {
+			focus_next = { "j", "<Down>", "<Tab>" },
+			focus_prev = { "k", "<Up>", "<S-Tab>" },
+			close = { "<Esc>", "q" },
+			submit = { "<CR>" },
 		},
+		on_submit = function(item)
+			handle_input(item.text)
+		end,
 	})
 
-	popup:mount()
-
-	local function handle_input(index)
-		if themes[index] then
-			helper.apply_theme(themes[index])
-			popup:unmount()
-		end
-	end
-
-	-- Display themes as menu items
-	for i, theme in ipairs(themes) do
-		vim.api.nvim_buf_set_lines(popup.bufnr, i - 1, i, false, { i .. ". " .. theme })
-	end
-
-	-- Key handling
-	popup:map("n", "<CR>", function()
-		local row = vim.api.nvim_win_get_cursor(0)[1]
-		handle_input(row)
-	end, { noremap = true })
-	popup:on(event.BufLeave, function()
-		popup:unmount()
-	end)
+	-- mount the component
+	menu:mount()
 end
 
 return M
