@@ -6,152 +6,91 @@ This is the list of sources of plugins and their dependencies.
 
 - [Plugins](#plugins)
 - [Table of content](#table-of-content)
-  - [Git](#git)
-  - [LSP](#lsp)
-  - [NoLSP](#nolsp)
-  - [Themes/Colorschemes](#themescolorschemes)
-  - [General](#general)
+- [Core](#core)
+- [Extra](#extra)
+- [LSP](#lsp)
+- [Nonlsp](#nonlsp)
+- [Util](#util)
+- [Experimental](#experimental)
 
-## Git
+## Core
 
-Git specific plugins
+Core plugins
 
-### diffview
+- [blink](https://github.com/saghen/blink.cmp)
+- [vim-commentary](https://github.com/tpope/vim-commentary)
+- [fzf-lua](https://github.com/ibhagwan/fzf-lua)
+  - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [diffview](https://github.com/sindrets/diffview.nvim)
+- [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+  - [plenary](https://github.com/lua/plenary.nvim)
+- [harpoon](https://github.com/ThePrimeagen/harpoon)
+- [lualine](https://github.com/nvim-lualine/lualine.nvim)
+- [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+  - [plenary](https://github.com/nvim-lua/plenary.nvim)
+  - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+  - [nui](https://github.com/MunifTanjim/nui.nvim)
+- [nui](https://github.com/MunifTanjim/nui.nvim)
+- [dracula](https://github.com/Mofiqul/dracula.nvim)
+- [tokyonight](https://github.com/folke/tokyonight.nvim)
+- [gruvbox](https://github.com/ellisonleao/gruvbox.nvim)
+- [kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [tree-sitter-templ](https://github.com/vrischmann/tree-sitter-templ)
 
-- [diffview](https://www.github.com/sindrets/diffview.nvim)
+## Extra
 
-### fugitive
+Ease of life plugins (not important)
 
-- [fugitive](https://www.github.com/tpope/vim-fugitive)
-
-### gitsigns
-
-- [gitsigns](https://www.github.com/lewis6991/gitsigns.nvim)
-
-  - [plenary](https://www.github.com/nvim-lua/plenary.nvim)
+- [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [limelight](https://github.com/junegunn/limelight.vim)
+- [markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
 
 ## LSP
 
-LSP specific plugins
+LSP plugins
 
-### lspconfig
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [blink](https://github.com/saghen/blink.cmp)
+- [mason](https://github.com/williamboman/mason.nvim)
+  - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+- [none-ls](https://github.com/nvimtools/none-ls.nvim)
+  - [mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
+  - [none-ls-extras](https://github.com/nvimtools/none-ls-extras.nvim)
 
-- [lspconfig](https://www.github.com/neovim/nvim-lspconfig)
+## Nonlsp
 
-  - [blink](https://www.github.com/saghen/blink.cmp)
+Language specific but not tied to LSP plugins
 
-### mason
+- [bats](https://github.com/aliou/bats.vim)
+- [rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim)
 
-- [mason](https://www.github.com/williamboman/mason.nvim)
+## Util
 
-  - [mason-lspconfig](https://www.github.com/williamboman/mason-lspconfig.nvim)
-  - [mason-tool-installer](https://www.github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+Ease of life plugins
 
-### none-ls
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+- [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
+  - [promise-async](https://github.com/kevinhwang91/promise-async)
+- [which-key](https://github.com/folke/which-key.nvim)
+- [todo-comments](https://github.com/folke/todo-comments.nvim)
+  - [plenary](https://github.com/nvim-lua/plenary.nvim)
+- [snacks](https://github.com/folke/snacks.nvim)
+- [noice](https://github.com/folke/noice.nvim)
+  - [nui](https://github.com/MunifTanjim/nui.nvim)
+  - [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [vim-surround](https://github.com/tpope/vim-surround)
+  - [vim-repeat](https://github.com/tpope/vim-repeat)
+- [mini](https://github.com/echasnovski/mini.ai)
 
-- [none-ls](https://www.github.com/nvimtools/none-ls.nvim)
+## Experimental
 
-  - [mason-null-ls](https://www.github.com/jay-babu/mason-null-ls.nvim)
-  - [none-ls-extras](https://www.github.com/nvimtools/none-ls-extras.nvim)
+Currently trying out plugins
 
-## NoLSP
-
-LSP related but not tied directly to them
-
-### bats
-
-- [bats](https://www.github.com/aliou/bats.vim)
-
-### rainbow_csv
-
-- [rainbow_csv](https://www.github.com/cameron-wags/rainbow_csv.nvim)
-
-## Themes/Colorschemes
-
-Themes/Colorschemes specific plugins
-
-- [dracula](https://www.github.com/Mofiqul/dracula.nvim)
-- [gruvbox](https://www.github.com/ellisonleao/gruvbox.nvim)
-- [kanagawa](https://www.github.com/rebelot/kanagawa.nvim)
-
-## General
-
-Other plugins
-
-### Autocomplete
-
-- [blink](https://www.github.com/saghen/blink.cmp)
-
-### Auto pair & tags
-
-- [nvim-ts-autotag](https://www.github.com/windwp/nvim-ts-autotag)
-- [nvim-autopairs](https://www.github.com/windwp/nvim-autopairs)
-
-  - [nvim-cmp](https://www.github.com/hrsh7th/nvim-cmp)
-
-### Commentary
-
-- [vim-commentary](https://www.github.com/tpope/vim-commentary)
-
-### Folds
-
-- [nvim-ufo](https://www.github.com/kevinhwang91/nvim-ufo)
-
-  - [promise-async](https://www.github.com/kevinhwang91/promise-async)
-
-### Folke
-
-- [lazydev](https://www.github.com/folke/lazydev.nvim)
-- [which-key](https://www.github.com/folke/which-key.nvim)
-- [neoconf](https://www.github.com/folke/neoconf.nvim)
-
-### Fuzzy
-
-- [fzf-lua](https://www.github.com/ibhagwan/fzf-lua)
-  - [nvim-web-devicons](https://www.github.com/nvim-tree/nvim-web-devicons)
-
-### Harpoon
-
-- [harpoon](https://www.github.com/ThePrimeagen/harpoon)
-
-### Indentline
-
-- [indent-blankline](https://www.github.com/lukas-reineke/indent-blankline.nvim)
-
-### Limelight
-
-- [limelight](https://www.github.com/junegunn/limelight.vim)
-
-### Lualine
-
-- [lualine](https://www.github.com/nvim-lualine/lualine.nvim)
-
-### Markdown
-
-- [markdown-preview](https://www.github.com/iamcco/markdown-preview.nvim)
-
-### Neotree
-
-- [neo-tree](https://www.github.com/nvim-neo-tree/neo-tree.nvim)
-
-  - [plenary](https://www.github.com/nvim-lua/plenary.nvim)
-  - [nvim-web-devicons](https://www.github.com/nvim-tree/nvim-web-devicons)
-  - [nui](https://www.github.com/MunifTanjim/nui.nvim)
-
-### Nui
-
-- [nui](https://www.github.com/MunifTanjim/nui.nvim)
-
-### Surround
-
-- [vim-surround](https://www.github.com/tpope/vim-surround)
-
-### TMUX
-
-- [vim-tmux-navigator](https://www.github.com/christoomey/vim-tmux-navigator)
-
-### Treesitter
-
-- [nvim-treesitter](https://www.github.com/nvim-treesitter/nvim-treesitter)
-
-  - [tree-sitter-templ](https://www.github.com/vrischmann/tree-sitter-templ)
+- [bufferline](https://github.com/akinsho/bufferline.nvim)
+  - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)

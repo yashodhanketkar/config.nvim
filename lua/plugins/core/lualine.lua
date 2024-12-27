@@ -7,7 +7,7 @@ return {
 				component_separators = { left = "╲", right = "╱" },
 			},
 			sections = {
-				lualine_x = {
+				lualine_c = {
 					{
 						require("noice").api.status.command.get,
 						cond = require("noice").api.status.command.has,
@@ -18,11 +18,10 @@ return {
 					},
 				},
 				lualine_y = {
-					{
-						"datetime",
-						style = "%H:%M",
-					},
+					{ "location", separator = "╱", padding = 1 },
+					{ "progress", padding = 1 },
 				},
+				lualine_z = { { "datetime", style = "  %H:%M:%S" } },
 			},
 		})
 	end,
