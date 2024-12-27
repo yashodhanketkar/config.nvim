@@ -1,6 +1,11 @@
 return {
-	priority = 1000,
-	{ "Mofiqul/dracula.nvim" },
+	{
+		"Mofiqul/dracula.nvim",
+		init = function()
+			require("dracula").setup()
+			vim.cmd("colorscheme dracula")
+		end,
+	},
 	{
 		"folke/tokyonight.nvim",
 		opts = {
