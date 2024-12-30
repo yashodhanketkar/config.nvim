@@ -1,6 +1,7 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
+		local status = require("noice").api.status
 		require("lualine").setup({
 			options = {
 				section_separators = { left = "", right = "" },
@@ -8,14 +9,8 @@ return {
 			},
 			sections = {
 				lualine_c = {
-					{
-						require("noice").api.status.command.get,
-						cond = require("noice").api.status.command.has,
-					},
-					{
-						require("noice").api.status.mode.get,
-						cond = require("noice").api.status.mode.has,
-					},
+					{ status.command.get, cond = status.command.has },
+					{ status.mode.get, cond = status.mode.has },
 				},
 				lualine_y = {
 					{ "location", separator = "╱", padding = 1 },
