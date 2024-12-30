@@ -12,7 +12,11 @@ return {
 		completion = {
 			documentation = { auto_show = true, auto_show_delay_ms = 500 },
 			menu = {
-				draw = { columns = { { "label", gap = 1, "label_description" }, { "kind_icon", gap = 1, "kind" } } },
+				draw = {
+					columns = {
+						{ "kind_icon", "label", "kind", gap = 1 },
+					},
+				},
 			},
 		},
 	},
