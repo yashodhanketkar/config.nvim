@@ -1,17 +1,7 @@
 return {
-	{
-		"Mofiqul/dracula.nvim",
-		init = function()
-			require("dracula").setup()
-			vim.cmd("colorscheme dracula")
-		end,
-	},
-	{
-		"folke/tokyonight.nvim",
-		opts = {
-			terminal_colors = false,
-		},
-	},
+	{ "Mofiqul/dracula.nvim" },
+	{ "catppuccin/nvim", name = "catppuccin" },
+	{ "folke/tokyonight.nvim", opts = { terminal_colors = false } },
 	{
 		"ellisonleao/gruvbox.nvim",
 		opts = {
