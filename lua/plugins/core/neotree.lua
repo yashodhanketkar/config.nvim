@@ -25,7 +25,7 @@ return {
 		})
 	end,
 	keys = {
-		{ "<C-n>", ":Neotree filesystem reveal left<cr>", desc = "Open Neotree on left" },
-		{ "<leader>bf", ":Neotree buffers reveal float<cr>", desc = "Shows Neotree buffers" },
+		{ "<C-n>", "<cmd>Neotree filesystem reveal left<cr>", desc = "Open Neotree on left" },
+		{ "<leader>bf", "<cmd>Neotree buffers reveal float<cr>", desc = "Shows Neotree buffers" },
 	},
 }

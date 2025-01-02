@@ -1,3 +1,9 @@
+-- handle loading fix
+local function theme_load_fix()
+	local colorscheme = vim.g.colors_name
+	vim.cmd("colorscheme " .. colorscheme)
+end
+
 -- handle file check
 local function file_exists(filepath)
 	local f = io.open(filepath, "r")
@@ -40,6 +46,8 @@ local function load_preferences()
 			theme = preferences.theme,
 		},
 	})
+
+	theme_load_fix()
 end
 
 return {

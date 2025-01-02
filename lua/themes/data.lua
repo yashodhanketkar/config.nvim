@@ -5,6 +5,7 @@ M.themes = {
 	"gruvbox",
 	"kanagawa",
 	"tokyonight",
+	"catppuccin",
 }
 
 return M
