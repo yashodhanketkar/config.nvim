@@ -39,6 +39,7 @@ Core plugins
 - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
   - [tree-sitter-templ](https://github.com/vrischmann/tree-sitter-templ)
+- [oil](https://github.com/stevearc/oil.nvim)
 
 ## Extra
 
@@ -57,14 +58,7 @@ LSP plugins
 - [mason](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
   - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
-- [none-ls](https://github.com/nvimtools/none-ls.nvim)
-  - [mason-null-ls](https://github.com/jay-babu/mason-null-ls.nvim)
-  - [none-ls-extras](https://github.com/nvimtools/none-ls-extras.nvim)
-
-## Nonlsp
-
-Language specific but not tied to LSP plugins
-
+- [conform.nvim](https://github.com/stevearc/conform.nvim)
 - [bats](https://github.com/aliou/bats.vim)
 - [rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim)
 
@@ -86,7 +80,13 @@ Ease of life plugins
   - [nvim-notify](https://github.com/rcarriga/nvim-notify)
 - [vim-surround](https://github.com/tpope/vim-surround)
   - [vim-repeat](https://github.com/tpope/vim-repeat)
-- [mini](https://github.com/echasnovski/mini.ai)
+- [mini.ai](https://github.com/echasnovski/mini.ai)
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+    - [nvim-dap-go](https://github.com/leoluz/nvim-dap-go)
+    - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+    - [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
+    - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
+    - [mason.nvim](https://github.com/williamboman/mason.nvim)
 
 ## Experimental
 
