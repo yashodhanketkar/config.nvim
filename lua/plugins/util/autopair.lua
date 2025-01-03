@@ -2,6 +2,7 @@ return {
 	{
 		"windwp/nvim-autopairs",
 		dependencies = { "hrsh7th/nvim-cmp" },
+		event = "VeryLazy",
 		config = function()
 			require("nvim-autopairs").setup({})
 			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
@@ -11,6 +12,7 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
+		event = "VeryLazy",
 		config = function()
 			require("nvim-ts-autotag").setup({
 				opts = {

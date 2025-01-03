@@ -13,6 +13,7 @@ return {
 			clangd = {},
 			bashls = {},
 			ts_ls = {},
+			rust_analyzer = {},
 		},
 	},
 	config = function(_, opts)

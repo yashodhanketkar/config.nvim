@@ -1,5 +1,6 @@
 return {
 	"iamcco/markdown-preview.nvim",
+	event = "VeryLazy",
 	cmd = {
 		"MarkdownPreviewToggle",
 		"MarkdownPreview",
