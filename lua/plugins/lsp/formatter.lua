@@ -6,6 +6,7 @@ return {
 			go = { "goimports", "golines" },
 			javascript = { "prettier" },
 			lua = { "stylua" },
+			markdown = { "markdownfmt" },
 			python = { "isort", "black" },
 			rust = { "rustfmt" },
 			json = { "prettier" },
