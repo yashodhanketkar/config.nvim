@@ -5,6 +5,7 @@ return {
 		formatters_by_ft = {
 			go = { "goimports", "golines" },
 			javascript = { "prettier" },
+			tex = { "tex-fmt" },
 			lua = { "stylua" },
 			markdown = { "markdownfmt" },
 			python = { "isort", "black" },
