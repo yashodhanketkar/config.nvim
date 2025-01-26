@@ -3,6 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		formatters_by_ft = {
+			c = { "clang-format" },
 			go = { "goimports", "golines" },
 			javascript = { "prettier" },
 			tex = { "tex-fmt" },
