@@ -1,39 +1,29 @@
 return {
-	{ "Mofiqul/dracula.nvim" },
-	{ "catppuccin/nvim", name = "catppuccin" },
-	{ "folke/tokyonight.nvim", opts = { terminal_colors = false } },
 	{
-		"ellisonleao/gruvbox.nvim",
-		opts = {
-			terminal_colors = true,
-			undercurl = true,
-			underline = true,
-			bold = true,
-			italic = {
-				strings = false,
-				emphasis = true,
-				comments = true,
-				operators = false,
-				folds = true,
-			},
-			strikethrough = true,
-			inverse = false,
+		enabled = true,
+		"yashodhanketkar/themeui.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			{ "Mofiqul/dracula.nvim" },
+			{ "catppuccin/nvim", name = "catppuccin" },
+			{ "folke/tokyonight.nvim", opts = { terminal_colors = false } },
+			{ "ellisonleao/gruvbox.nvim", opts = { terminal_colors = true } },
+			{ "rebelot/kanagawa.nvim", opts = { terminal_colors = true } },
+			{ "rose-pine/neovim", name = "rose-pine", opts = { variant = "auto", dark_variant = "moon" } },
+			{ "Mofiqul/vscode.nvim", name = "vscode" },
 		},
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		opts = {
-			terminal_colors = true,
-			undercurl = true,
-			underline = true,
-			bold = true,
-			italic = {
-				strings = false,
-				emphasis = true,
-				comments = true,
-				operators = false,
-				folds = true,
-			},
-		},
+		config = function()
+			require("themeui").setup({
+				themes = {
+					"dracula",
+					"gruvbox",
+					"kanagawa",
+					"catppuccin",
+					"tokyonight",
+					"rose-pine",
+					"vscode",
+				},
+			})
+		end,
 	},
 }

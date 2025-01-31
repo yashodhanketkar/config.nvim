@@ -1,7 +1,4 @@
-local themes = require("themes")
-
 local function setup_keymaps()
-	-- custom keymaps
 	vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save current buffer" })
 	vim.keymap.set("n", "<leader>q", "<cmd>wq<cr>", { desc = "Save and close current buffer" })
 	vim.keymap.set("n", "<leader>Q", "<cmd>q!<cr>", { desc = "Force close current buffer" })
@@ -20,11 +17,6 @@ local function setup_keymaps()
 	vim.keymap.set("n", "<leader>gdc", "<cmd>DiffviewClose<cr>", { desc = "Git close diff view" })
 	vim.keymap.set("n", "<leader>gm", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Toggles git blame" })
 	vim.keymap.set("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<cr>", { desc = "Toggles git sings" })
-
-	-- custom keymaps with lua functions
-	vim.keymap.set("n", "<leader>bg", themes.toggle_background, { desc = "Toggle background" })
-	vim.keymap.set("n", "<leader>ts", themes.switch_theme, { desc = "Toggle colorscheme" })
-	vim.keymap.set("n", "<leader>th", themes.theme_selector, { desc = "Select colorscheme" })
 end
 
 return {
