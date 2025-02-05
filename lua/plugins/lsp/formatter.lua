@@ -3,9 +3,12 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		formatters_by_ft = {
+			c = { "clang-format" },
 			go = { "goimports", "golines" },
 			javascript = { "prettier" },
+			tex = { "tex-fmt" },
 			lua = { "stylua" },
+			markdown = { "markdownfmt" },
 			python = { "isort", "black" },
 			rust = { "rustfmt" },
 			json = { "prettier" },

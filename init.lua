@@ -16,4 +16,3 @@ require("lazy").setup("plugins")
 
 -- themes setup
 require("preferences").setup()
-require("themes").setup()

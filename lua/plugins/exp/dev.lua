@@ -1,7 +1,15 @@
 return {
 	{
-		enabled = true,
-		"yashodhanketkar/themeui.nvim",
+		"milisims/nvim-luaref",
+		event = "VeryLazy",
+	},
+	{
+		"folke/lua-dev.nvim",
+		event = "VeryLazy",
+	},
+	{
+		enabled = false,
+		dir = "~/Projects/themeui",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 			{ "Mofiqul/dracula.nvim" },
