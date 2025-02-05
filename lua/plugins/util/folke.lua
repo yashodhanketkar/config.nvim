@@ -15,7 +15,10 @@ return {
 		enabled = true,
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		dependencies = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
 		opts = { presets = { bottom_search = true, long_message_to_split = true } },
 		keys = {
 			{ "<leader>nd", "<cmd>NoiceDismiss<cr>", desc = "Dismiss all notifications" },
