@@ -29,6 +29,7 @@ return {
 					"bash",
 					"templ",
 					"tsx",
+					"rasi",
 				},
 				sync_install = false,
 				highlight = {

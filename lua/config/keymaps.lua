@@ -1,4 +1,5 @@
 local function setup_keymaps()
+  -- stylua: ignore start
 	vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save current buffer" })
 	vim.keymap.set("n", "<leader>q", "<cmd>wq<cr>", { desc = "Save and close current buffer" })
 	vim.keymap.set("n", "<leader>Q", "<cmd>q!<cr>", { desc = "Force close current buffer" })
@@ -17,6 +18,8 @@ local function setup_keymaps()
 	vim.keymap.set("n", "<leader>gdc", "<cmd>DiffviewClose<cr>", { desc = "Git close diff view" })
 	vim.keymap.set("n", "<leader>gm", "<cmd>Gitsigns toggle_current_line_blame<cr>", { desc = "Toggles git blame" })
 	vim.keymap.set("n", "<leader>gs", "<cmd>Gitsigns toggle_signs<cr>", { desc = "Toggles git sings" })
+	vim.keymap.set("n", "ycc", "yygccp", { remap = true, desc = "Copy current line below and comment out original line", })
+	-- stylua: ignore end
 
 	-- dev
 	vim.keymap.set("n", "<leader>lr", ":Lazy reload ", { desc = "Start Lazy reload command" })

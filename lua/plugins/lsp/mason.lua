@@ -18,6 +18,9 @@ return {
 					package_uninstalled = "✗",
 				},
 			},
+			PATH = {
+				"prepend",
+			},
 		})
 
 		mason_lspconfig.setup({
@@ -38,6 +41,7 @@ return {
 				"bashls",
 				"intelephense",
 				"templ",
+				"biome",
 			},
 			-- auto-install configured servers (with lspconfig)
 			automatic_installation = true, -- not the same as ensure_installed

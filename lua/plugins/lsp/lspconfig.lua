@@ -14,6 +14,7 @@ return {
 			bashls = {},
 			ts_ls = {},
 			rust_analyzer = {},
+			texlab = {},
 		},
 	},
 	config = function(_, opts)
