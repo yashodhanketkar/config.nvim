@@ -26,6 +26,8 @@ return {
 			{ "<leader>fg", "<cmd>FzfLua live_grep<cr>", desc = "Live Grep" },
 			{ "<leader>fb", "<cmd>FzfLua buffers<cr>", desc = "Buffers" },
 			{ "<leader>fh", "<cmd>FzfLua helptags<cr>", desc = "Show help tags" },
+			{ "<leader>fd", "<cmd>FzfLua lsp_workspace_diagnostics<cr>", desc = "Show lsp diagnostics" },
+			{ "<leader>fs", "<cmd>FzfLua lsp_document_symbols<cr>", desc = "Show lsp symbols" },
 			{ "<leader>fc", ":FzfLua ", desc = "Start FzfLua command line" },
 		},
 	},

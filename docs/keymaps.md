@@ -20,18 +20,19 @@ Keymaps are divided as
 
 ### General keymaps
 
-| Key bindings                                     | Descriptions                               |
-|--------------------------------------------------|--------------------------------------------|
-| <kbd>leader</kbd> <kbd>w</kbd>                   | Saves current changes in buffer            |
-| <kbd>leader</kbd> <kbd>q</kbd>                   | Saves and closes current changes in buffer |
-| <kbd>leader</kbd> <kbd>Q</kbd>                   | Force close current buffer                 |
-| <kbd>leader</kbd> <kbd>v</kbd>                   | Splits window vertically                   |
-| <kbd>leader</kbd> <kbd>s</kbd>                   | Splits window horizontally                 |
-| <kbd>C-j</kbd>                                   | Jump to lower window                       |
-| <kbd>C-k</kbd>                                   | Jump to upper window                       |
-| <kbd>C-h</kbd>                                   | Jump to left window                        |
-| <kbd>C-l</kbd>                                   | Jump to right window                       |
-| <kbd>leader</kbd> <kbd>leader</kbd> <kbd>n</kbd> | Clear text highlights                      |
+| Key bindings                                     | Descriptions                                          |
+|--------------------------------------------------|-------------------------------------------------------|
+| <kbd>leader</kbd> <kbd>w</kbd>                   | Saves current changes in buffer                       |
+| <kbd>leader</kbd> <kbd>q</kbd>                   | Saves and closes current changes in buffer            |
+| <kbd>leader</kbd> <kbd>Q</kbd>                   | Force close current buffer                            |
+| <kbd>leader</kbd> <kbd>v</kbd>                   | Splits window vertically                              |
+| <kbd>leader</kbd> <kbd>s</kbd>                   | Splits window horizontally                            |
+| <kbd>C-j</kbd>                                   | Jump to lower window                                  |
+| <kbd>C-k</kbd>                                   | Jump to upper window                                  |
+| <kbd>C-h</kbd>                                   | Jump to left window                                   |
+| <kbd>C-l</kbd>                                   | Jump to right window                                  |
+| <kbd>leader</kbd> <kbd>leader</kbd> <kbd>n</kbd> | Clear text highlights                                 |
+| <kbd>y</kbd><kbd>c</kbd><kbd>c</kbd>             | Copy current line below and comment out original line |
 
 ### Plugin specific keymaps
 
@@ -66,10 +67,12 @@ Keymaps are divided as
 | <kbd>leader</kbd> <kbd>G</kbd>                                        | Starts Git command in terminal              |
 | **FzfLua**                                                            |                                             |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>f</kbd>                           | FzfLua list files                           |
-| <kbd>leader</kbd> <kbd>f</kbd> <kbd>r</kbd>                           | FzfLua resumes previous operation           |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>g</kbd>                           | FzfLua list live grep                       |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>b</kbd>                           | FzfLua list buffers                         |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>h</kbd>                           | FzfLua list helptags                        |
+| <kbd>leader</kbd> <kbd>f</kbd> <kbd>d</kbd>                           | FzfLua list diagnostics                     |
+| <kbd>leader</kbd> <kbd>f</kbd> <kbd>s</kbd>                           | FzfLua list symbols                         |
+| <kbd>leader</kbd> <kbd>f</kbd> <kbd>r</kbd>                           | FzfLua resumes previous operation           |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>c</kbd>                           | Start manual FzfLua command                 |
 | **Gitsigns**                                                          |                                             |
 | <kbd>leader</kbd> <kbd>g</kbd> <kbd>s</kbd>                           | Toggles git signs                           |

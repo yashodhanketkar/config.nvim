@@ -1,7 +1,7 @@
 return {
 	{
 		enabled = true,
-		"yashodhanketkar/themeui.nvim",
+		"louriest/themeui.nvim",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 			{ "Mofiqul/dracula.nvim" },
