@@ -1,4 +1,7 @@
 local function configure_servers()
+	local lsps = require("config.lsp.servers").serevers
+
+	-- root configuration
 	vim.lsp.config("*", {
 		capabilities = {
 			textDocument = {
@@ -10,42 +13,18 @@ local function configure_servers()
 		root_markers = { ".git" },
 	})
 
-	vim.lsp.config("luals", {
-		cmd = { "lua-language-server" },
-		filetypes = { "lua" },
-		settings = {
-			Lua = {
-				diagnostics = {
-					globals = { "vim", "require" },
-				},
-				workspace = {
-					library = vim.api.nvim_get_runtime_file("", true),
-				},
-				telemetry = {
-					enable = false,
-				},
-				runtime = {
-					version = "LuaJIT",
-				},
-			},
-		},
-	})
-
-	vim.lsp.config("bashls", {
-		cmd = { "bash-language-server", "start" },
-		ignoredRootPaths = { "~" },
-	})
-
-	vim.lsp.config("gopls", {
-		cmd = { "gopls", "serve" },
-		filetypes = { "go" },
-	})
+	-- calls servers and their configurations
+	-- enable server after configurations
+	for server, config in pairs(lsps) do
+		vim.lsp.config(server, config)
+		vim.lsp.enable(server)
+	end
 end
 
 local function setup_lsp()
+	-- setup LSP related keybindings
 	require("config.lsp.keys").setup()
 	configure_servers()
-	vim.lsp.enable({ "bashls", "gopls", "luals" })
 end
 
 return {

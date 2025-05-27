@@ -69,11 +69,6 @@ LSP
 LSP plugins
 
 -	[conform.nvim](https://github.com/stevearc/conform.nvim)
--	[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
-	-	[blink](https://github.com/saghen/blink.cmp)
--	[mason](https://github.com/williamboman/mason.nvim)
-	-	[mason-lspconfig](https://github.com/williamboman/mason-lspconfig.nvim)
-	-	[mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 -	[rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim)
 -	[bats](https://github.com/aliou/bats.vim)
 
