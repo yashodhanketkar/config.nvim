@@ -14,6 +14,7 @@ return {
 			sql = { "sql_formatter" },
 			tex = { "tex-fmt" },
 			typescript = { "prettier" },
+			xml = { "xmllint" },
 		},
 		format_on_save = {
 			time_out = 500,

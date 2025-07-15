@@ -34,7 +34,7 @@ Keymaps are divided as
 | <kbd>leader</kbd> <kbd>leader</kbd> <kbd>n</kbd> | Clear text highlights                                 |
 | <kbd>y</kbd><kbd>c</kbd><kbd>c</kbd>             | Copy current line below and comment out original line |
 
-### Plugin specific keymaps
+### Plugin specific keymaps [^1]
 
 | Key bindings                                                          | Descriptions                                |
 |-----------------------------------------------------------------------|---------------------------------------------|
@@ -121,8 +121,13 @@ Keymaps are divided as
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>i</kbd> <kbd>a</kbd> <kbd>u</kbd> | Enable supermaven-nvim                      |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>i</kbd> <kbd>a</kbd> <kbd>d</kbd> | Disable supermaven-nvim                     |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>i</kbd> <kbd>a</kbd> <kbd>t</kbd> | Toggle supermaven-nvim                      |
+| <kbd>C-l</kbd>                                                        | Accept suggestion                           |
+| <kbd>C-j</kbd>                                                        | Accept word                                 |
+| <kbd>C-h</kbd>                                                        | Clear suggestion                            |
 | **Todo-comments**                                                     |                                             |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>f</kbd>              | Opens todo list with Lua_Fzf                |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>l</kbd>              | Opens todo list with Lua_Fzf                |
 | **Whichkey**                                                          |                                             |
 | <kbd>leader</kbd> <kbd>leader</kbd> <kbd>wk</kbd>                     | Lists available key sequences               |
+
+[^1]: For default keymaps, refer to source code of plugins
