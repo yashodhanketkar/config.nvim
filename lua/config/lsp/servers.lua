@@ -1,6 +1,10 @@
 local M = {}
 
 M.serevers = {
+	clangd = {
+		cmd = { "clangd" },
+		filetypes = { "c", "cpp", "objc", "objcpp" },
+	},
 	luals = {
 		cmd = { "lua-language-server" },
 		filetypes = { "lua" },
@@ -34,8 +38,19 @@ M.serevers = {
 		filetypes = { "markdown" },
 	},
 	tsserver = {
-		cmd = { "typescript-language-server", "--stdio" },
-		filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+		cmd = { "tsgo", "--lsp", "--stdio" },
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"typescript.tsx",
+			"javascript",
+			"javascriptreact",
+			"javascript.jsx",
+		},
+	},
+	sveleteserver = {
+		cmd = { "svelteserver", "--stdio" },
+		filetypes = { "svelte" },
 	},
 	htmlserver = {
 		cmd = { "vscode-html-language-server", "--stdio" },

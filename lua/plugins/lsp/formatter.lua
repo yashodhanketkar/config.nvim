@@ -6,6 +6,7 @@ return {
 			c = { "clang-format" },
 			go = { "goimports", "golines" },
 			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
 			json = { "prettier" },
 			lua = { "stylua" },
 			markdown = { "markdownfmt" },
@@ -14,6 +15,7 @@ return {
 			sql = { "sql_formatter" },
 			tex = { "tex-fmt" },
 			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
 			xml = { "xmllint" },
 		},
 		format_on_save = {

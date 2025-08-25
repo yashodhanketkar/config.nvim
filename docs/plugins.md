@@ -62,6 +62,7 @@ Ease of life plugins (not important)
 -	[indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 -	[limelight](https://github.com/junegunn/limelight.vim)
 -	[markdown-preview](https://github.com/iamcco/markdown-preview.nvim)
+-	[colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 
 LSP
 ---
@@ -104,4 +105,9 @@ Experimental
 
 Currently trying out plugins
 
--	[bufferline](https://github.com/akinsho/bufferline.nvim)
+-	[luaref](https://github.com/milisims/nvim-luaref)
+-	[lua-dev](https://github.com/folke/lua-dev.nvim)
+-	[lazydev](https://github.com/folke/lazydev.nvim)
+-	[themeui](https://github.com/yashodhanketkar/themeui.nvim)[^1]
+
+[^1]: Local version

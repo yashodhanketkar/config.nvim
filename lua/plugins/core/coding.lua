@@ -11,6 +11,7 @@ return {
 			require("nvim-treesitter.configs").setup({
 				ensure_installed = {
 					"c",
+					"cpp",
 					"lua",
 					"vim",
 					"vimdoc",
@@ -19,6 +20,7 @@ return {
 					"heex",
 					"javascript",
 					"typescript",
+					"svelte",
 					"html",
 					"python",
 					"rust",

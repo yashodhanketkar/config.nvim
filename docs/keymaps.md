@@ -46,6 +46,8 @@ Keymaps are divided as
 | <kbd>C-e</kbd>                                                        | Show completion suggestion                  |
 | <kbd>C-q</kbd>                                                        | Close completion window                     |
 | <kbd>Tab</kbd>                                                        | Confirm selection                           |
+| **Colorizer**                                                         |                                             |
+| <kbd>leader</kbd><kbd>t</kbd><kbd>c</kbd>                             | Toggle colorizer                            |
 | **Debugger**                                                          |                                             |
 | <kbd>F9</kbd>                                                         | Debugger toggle breakpoint                  |
 | <kbd>leader</kbd> <kbd>d</kbd> <kbd>b</kbd>                           | Debugger toggle breakpoint                  |
