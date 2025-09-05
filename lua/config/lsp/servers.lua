@@ -94,6 +94,17 @@ M.serevers = {
 		filetypes = { "python" },
 		root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile" },
 	},
+	jdtls = {
+		filetypes = { "java" },
+		cmd = { "jdtls" },
+		root_markers = { "gradlew", ".git", "mvnw" },
+		settings = {
+			java = {},
+		},
+		init_options = {
+			bundles = {},
+		},
+	},
 }
 
 return M
