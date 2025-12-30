@@ -1,5 +1,5 @@
 local function configure_servers()
-	local lsps = require("config.lsp.servers").serevers
+	local lsps = require("config.lsp.servers").servers
 
 	-- root configuration
 	vim.lsp.config("*", {

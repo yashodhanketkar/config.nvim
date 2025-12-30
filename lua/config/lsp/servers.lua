@@ -1,6 +1,6 @@
 local M = {}
 
-M.serevers = {
+M.servers = {
 	clangd = {
 		cmd = { "clangd" },
 		filetypes = { "c", "cpp", "objc", "objcpp" },
@@ -38,7 +38,10 @@ M.serevers = {
 		filetypes = { "markdown" },
 	},
 	tsserver = {
-		cmd = { "tsgo", "--lsp", "--stdio" },
+		cmd = { "typescript-language-server", "--stdio" },
+		init_options = {
+			hostInfo = "neovim",
+		},
 		filetypes = {
 			"typescript",
 			"typescriptreact",
@@ -47,10 +50,18 @@ M.serevers = {
 			"javascriptreact",
 			"javascript.jsx",
 		},
-	},
-	sveleteserver = {
-		cmd = { "svelteserver", "--stdio" },
-		filetypes = { "svelte" },
+		root_markers = {
+			"tsconfig.json",
+			"jsconfig.json",
+			"package.json",
+			".git",
+			"tsconfig.base.js",
+		},
+		settings = {
+			implicitProjectConfiguration = {
+				checkJs = true,
+			},
+		},
 	},
 	htmlserver = {
 		cmd = { "vscode-html-language-server", "--stdio" },
@@ -93,6 +104,18 @@ M.serevers = {
 		cmd = { "pylsp" },
 		filetypes = { "python" },
 		root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile" },
+		settings = {
+			pylsp = {
+				plugins = {
+					pycodestyle = {
+						maxLineLength = 120,
+					},
+					flake8 = {
+						maxLineLength = 120,
+					},
+				},
+			},
+		},
 	},
 	jdtls = {
 		filetypes = { "java" },
@@ -103,6 +126,46 @@ M.serevers = {
 		},
 		init_options = {
 			bundles = {},
+		},
+	},
+	sqls = {
+		cmd = { "sqls" },
+		filetypes = { "sql" },
+	},
+	terraform = {
+		cmd = { "terraform-ls", "serve" },
+		filetypes = { "terraform", "tf" },
+	},
+	docker = {
+		cmd = { "docker-language-server", "start", "--stdio" },
+		filetypes = { "dockerfile", "yaml.docker-compose" },
+		root_markers = {
+			"Dockerfile",
+			"docker-compose.yaml",
+			"docker-compose.yml",
+			"compose.yaml",
+			"compose.yml",
+			"docker-bake.json",
+			"docker-bake.hcl",
+			"docker-bake.override.json",
+			"docker-bake.override.hcl",
+		},
+	},
+	dockerls = {
+		cmd = { "docker-langserver", "--stdio" },
+		filetypes = { "dockerfile" },
+		root_markers = { "Dockerfile" },
+	},
+	intelephense = {
+		cmd = { "intelephense", "--stdio" },
+		filetypes = { "php" },
+		root_markers = { "composer.json", "composer.lock" },
+		settings = {
+			intelephense = {
+				files = {
+					maxSize = 1000000,
+				},
+			},
 		},
 	},
 }

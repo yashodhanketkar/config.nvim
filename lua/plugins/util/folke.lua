@@ -35,6 +35,7 @@ return {
 			indent = { enabled = true },
 			notifier = { enabled = true },
 			scroll = { enabled = true, animate = { duration = { step = 4, total = 24 } } },
+			image = { enabled = false },
 		},
 	},
 }

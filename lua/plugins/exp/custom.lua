@@ -1,7 +1,7 @@
 return {
 	{
-		enabled = true,
-		"louriest/themeui.nvim",
+		enabled = false,
+		dir = "~/Projects/themeui",
 		dependencies = {
 			"MunifTanjim/nui.nvim",
 			{ "Mofiqul/dracula.nvim" },
@@ -14,14 +14,16 @@ return {
 		},
 		config = function()
 			require("themeui").setup({
-				themes = {
-					"dracula",
-					"gruvbox",
-					"kanagawa",
-					"catppuccin",
-					"tokyonight",
-					"rose-pine",
-					"vscode",
+				state = {
+					themes = {
+						"dracula",
+						"gruvbox",
+						"kanagawa",
+						"catppuccin",
+						"tokyonight",
+						"rose-pine",
+						"vscode",
+					},
 				},
 			})
 		end,

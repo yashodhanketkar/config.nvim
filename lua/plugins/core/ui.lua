@@ -8,6 +8,7 @@ return {
 	{ "MunifTanjim/nui.nvim", event = "VeryLazy" },
 	{
 		"nvim-lualine/lualine.nvim",
+		depedencies = { "folke/noice.nvim" },
 		event = "VeryLazy",
 		config = function()
 			local command = require("noice").api.status.command

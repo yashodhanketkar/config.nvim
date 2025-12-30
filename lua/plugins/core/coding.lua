@@ -1,53 +1,6 @@
 return {
 	{ "tpope/vim-commentary", event = "VeryLazy" },
 	{
-		"nvim-treesitter/nvim-treesitter",
-		dependencies = {
-			"vrischmann/tree-sitter-templ",
-		},
-		event = "VeryLazy",
-		build = ":TSUpdate",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"c",
-					"cpp",
-					"lua",
-					"vim",
-					"vimdoc",
-					"query",
-					"elixir",
-					"heex",
-					"javascript",
-					"typescript",
-					"svelte",
-					"html",
-					"python",
-					"rust",
-					"yaml",
-					"prisma",
-					"go",
-					"php",
-					"bash",
-					"templ",
-					"tsx",
-					"rasi",
-				},
-				sync_install = false,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = false,
-				},
-				indent = { enable = true },
-			})
-			vim.filetype.add({
-				extension = {
-					templ = "templ",
-				},
-			})
-		end,
-	},
-	{
 		"saghen/blink.cmp",
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
@@ -101,6 +54,35 @@ return {
 			{ "<leader>tiau", "<Cmd>SupermavenStart<CR>", desc = "Enable supermaven-nvim" },
 			{ "<leader>tiad", "<Cmd>SupermavenStop<CR>", desc = "Disable supermaven-nvim" },
 			{ "<leader>tiat", "<Cmd>SupermavenToggle<CR>", desc = "Toggle supermaven-nvim" },
+		},
+	},
+	{
+		"stevearc/conform.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		opts = {
+			formatters_by_ft = {
+				c = { "clang-format" },
+				cs = { "csharpier" },
+				dockerfile = { "dockerfmt" },
+				go = { "goimports", "golines" },
+				javascript = { "prettier" },
+				javascriptreact = { "prettier" },
+				json = { "prettier" },
+				lua = { "stylua" },
+				markdown = { "markdownfmt" },
+				python = { "isort", "black" },
+				rust = { "rustfmt" },
+				sql = { "sql_formatter" },
+				tex = { "tex-fmt" },
+				terraform = { "terraform_fmt" },
+				typescript = { "prettier" },
+				typescriptreact = { "prettier" },
+				xml = { "xmllint" },
+			},
+			format_on_save = {
+				time_out = 500,
+				lsp_format = "fallback",
+			},
 		},
 	},
 }

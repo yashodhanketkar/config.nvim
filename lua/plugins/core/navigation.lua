@@ -1,4 +1,18 @@
 return {
+	{
+		"stevearc/oil.nvim",
+		lazy = false,
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			default_file_explorer = false,
+			view_options = {
+				show_hidden = true,
+			},
+		},
+		keys = {
+			{ "-", "<cmd>Oil<cr>", desc = "Open parent directory" },
+		},
+	},
 	{ "christoomey/vim-tmux-navigator", event = "VeryLazy" },
 	{
 		"ThePrimeagen/harpoon",
@@ -20,6 +34,14 @@ return {
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {
+			winopts = {
+				preview = {
+					-- hidden = "hidden",
+					layout = "horizontal",
+				},
+			},
+		},
 		keys = {
 			{ "<leader>ff", "<cmd>FzfLua files<cr>", desc = "Find Files" },
 			{ "<leader>fr", "<cmd>FzfLua resume<cr>", desc = "Resumes previous operation" },
