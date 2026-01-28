@@ -6,6 +6,7 @@ return {
 	},
 	{
 		"GustavEikaas/easy-dotnet.nvim",
+		ft = { "cs" },
 		config = function()
 			require("easy-dotnet").setup()
 		end,

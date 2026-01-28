@@ -1,12 +1,12 @@
 return {
 	{
 		"tpope/vim-surround",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 		dependencies = { "tpope/vim-repeat" },
 	},
 	{
 		"echasnovski/mini.ai",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 		branch = "stable",
 		config = function()
 			require("mini.ai").setup({

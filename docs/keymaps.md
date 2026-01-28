@@ -62,6 +62,8 @@ Keymaps are divided as
 | **Diffview**                                                          |                                             |
 | <kbd>leader</kbd> <kbd>g</kbd> <kbd>d</kbd> <kbd>o</kbd>              | Git open diff view                          |
 | <kbd>leader</kbd> <kbd>g</kbd> <kbd>d</kbd> <kbd>c</kbd>              | Git close diff view                         |
+| **Flash**                                                             |                                             |
+| <kbd>leader</kbd> <kbd>/</kbd>                                        | Flash search                                |
 | **Folds**                                                             |                                             |
 | <kbd>z</kbd> <kbd>R</kbd>                                             | Opens all folds                             |
 | <kbd>z</kbd> <kbd>M</kbd>                                             | Closes all folds                            |

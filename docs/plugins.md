@@ -6,27 +6,27 @@ This is the list of sources of plugins and their dependencies.
 Table Of Content
 ----------------
 
-- [Plugins](#plugins)
-  - [Table Of Content](#table-of-content)
-  - [Core](#core)
-    - [Coding](#coding)
-    - [Git](#git)
-    - [Navigation](#navigation)
-    - [UI](#ui)
-    - [View](#view)
-  - [Experimental](#experimental)
-    - [Dev](#dev)
-    - [Custom](#custom)
-  - [Extra](#extra)
-    - [Colors](#colors)
-    - [CS](#cs)
-    - [Specials](#specials)
-  - [Utils](#utils)
-    - [Autopair](#autopair)
-    - [Debugger](#debugger)
-    - [Folds](#folds)
-    - [Folke](#folke)
-    - [Surround](#surround)
+-	[Plugins](#plugins)
+	-	[Table Of Content](#table-of-content)
+	-	[Core](#core)
+	-	[Coding](#coding)
+	-	[Git](#git)
+	-	[Navigation](#navigation)
+	-	[UI](#ui)
+	-	[View](#view)
+	-	[Experimental](#experimental)
+	-	[Dev](#dev)
+	-	[Custom](#custom)
+	-	[Extra](#extra)
+	-	[Colors](#colors)
+	-	[CS](#cs)
+	-	[Specials](#specials)
+	-	[Utils](#utils)
+	-	[Autopair](#autopair)
+	-	[Debugger](#debugger)
+	-	[Folds](#folds)
+	-	[Folke](#folke)
+	-	[Surround](#surround)
 
 Core
 ----
@@ -71,6 +71,8 @@ Experimental
 -	[lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
 -	[lazydev.nvim](https://github.com/folke/lazydev.nvim)
 -	[nvim-mini](https://github.com/nvim-mini/mini.test)
+-	[flash.nvim](https://github.com/folke/flash.nvim)
+-	[marks.nvim](https://github.com/chentoast/marks.nvim)
 
 ### Custom
 

@@ -1,7 +1,8 @@
 return {
-	{ "tpope/vim-commentary", event = "VeryLazy" },
+	{ "tpope/vim-commentary", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"saghen/blink.cmp",
+		event = { "BufReadPost", "BufNewFile" },
 		lazy = false,
 		dependencies = { "rafamadriz/friendly-snippets" },
 		version = "v0.*",
@@ -33,7 +34,7 @@ return {
 	},
 	{
 		"supermaven-inc/supermaven-nvim",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 		config = function()
 			require("supermaven-nvim").setup({
 				keymaps = {
@@ -63,6 +64,7 @@ return {
 			formatters_by_ft = {
 				c = { "clang-format" },
 				cs = { "csharpier" },
+				dart = { "dart_format" },
 				dockerfile = { "dockerfmt" },
 				go = { "goimports", "golines" },
 				javascript = { "prettier" },

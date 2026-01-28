@@ -1,17 +1,17 @@
 return {
 	{
 		"aliou/bats.vim",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 	},
 	{
 		"junegunn/limelight.vim",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 		keys = {
 			{ "<leader>ll", "<cmd>Limelight!!<cr>", desc = "Toggle limelight" },
 		},
 		{
 			"iamcco/markdown-preview.nvim",
-			event = "VeryLazy",
+			event = { "BufReadPost", "BufNewFile" },
 			cmd = {
 				"MarkdownPreviewToggle",
 				"MarkdownPreview",

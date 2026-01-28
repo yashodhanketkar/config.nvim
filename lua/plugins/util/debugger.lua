@@ -8,7 +8,7 @@ return {
 		"nvim-neotest/nvim-nio",
 		"williamboman/mason.nvim",
 	},
-	event = "VeryLazy",
+	event = { "BufReadPost", "BufNewFile" },
 	config = function()
 		local dap, ui = require("dap"), require("dapui")
 		local before = dap.listeners.before

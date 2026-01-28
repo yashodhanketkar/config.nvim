@@ -23,4 +23,25 @@ return {
 			require("mini.test").setup()
 		end,
 	},
+	{
+		"folke/flash.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = {
+			modes = {
+				char = {
+					enabled = false,
+				},
+			},
+		},
+		keys = {
+      -- stylua: ignore start
+      { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash search" },
+			-- stylua: ignore end
+		},
+	},
+	{
+		"chentoast/marks.nvim",
+		event = { "BufReadPost", "BufNewFile" },
+		opts = {},
+	},
 }

@@ -33,6 +33,7 @@ M.servers = {
 	gopls = {
 		cmd = { "gopls", "serve" },
 		filetypes = { "go" },
+		root_markers = { "go.mod", "go.sum" },
 	},
 	marksman = {
 		filetypes = { "markdown" },
@@ -165,6 +166,67 @@ M.servers = {
 				files = {
 					maxSize = 1000000,
 				},
+			},
+		},
+	},
+	rust_analyzer = {
+		cmd = { "rust-analyzer" },
+		filetypes = { "rust" },
+		capabilities = {
+			commands = {
+				commands = { "rust-analyzer.showReferences", "rust-analyzer.runSingle", "rust-analyzer.debugSingle" },
+			},
+			serverStatusNotification = true,
+		},
+		settings = {
+			["rust-analyzer"] = {
+				lens = {
+					debug = {
+						enable = true,
+					},
+					enable = true,
+					implementations = {
+						enable = true,
+					},
+					references = {
+						adt = {
+							enable = true,
+						},
+						enumVariant = {
+							enable = true,
+						},
+						method = {
+							enable = true,
+						},
+						trait = {
+							enable = true,
+						},
+					},
+					run = {
+						enable = true,
+					},
+					updateTest = {
+						enable = true,
+					},
+				},
+			},
+		},
+	},
+	dartls = {
+		cmd = { "dart", "language-server", "--protocol=lsp" },
+		filetypes = { "dart" },
+		{
+			closingLabels = true,
+			flutterOutline = true,
+			onlyAnalyzeProjectsWithOpenFiles = true,
+			outline = true,
+			suggestFromUnimportedLibraries = true,
+		},
+		root_markers = { "pubspec.yaml" },
+		settings = {
+			dart = {
+				completeFunctionCalls = true,
+				showTodos = true,
 			},
 		},
 	},

@@ -5,37 +5,42 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			local ensureInstalled = {
-				"c",
-				"cpp",
-				"lua",
+				-- core
 				"vim",
 				"vimdoc",
-				"query",
+				-- languages
+				"c",
+				"cpp",
+				"rust",
+				"go",
+				"java",
+				"lua",
+				"php",
+				"python",
 				"javascript",
+				-- web development
 				"typescript",
 				"html",
-				"python",
-				"rust",
-				"yaml",
-				"prisma",
-				"go",
-				"php",
-				"bash",
-				"tsx",
-				"rasi",
-				"make",
-				"terraform",
-				"toml",
-				"hyprlang",
-				"json",
 				"css",
-				"xml",
-				"markdown",
-				"java",
-				"kitty",
-				"nginx",
+				-- ORM, DB, and datatypes
+				"prisma",
+				"query",
 				"sql",
+				"xml",
+				"json",
+				"toml",
+				"yaml",
+				"markdown",
+				-- os related
+				"bash",
+				"hyprlang",
+				"kitty",
 				"zsh",
+				-- server configuration
+				"make",
+				"nginx",
+				"rasi",
+				"terraform",
 			}
 
 			local parser_installed = require("nvim-treesitter.config").get_installed()
@@ -60,7 +65,7 @@ return {
 		end,
 	},
 	{
-		enabled = true,
+		enabled = false,
 		"louriest/themeui.nvim",
 		branch = "0.2.0",
 		dependencies = {

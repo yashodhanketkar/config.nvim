@@ -7,7 +7,7 @@ return {
 	},
 	{
 		"cameron-wags/rainbow_csv.nvim",
-		event = "VeryLazy",
+		event = { "BufReadPost", "BufNewFile" },
 		config = true,
 		ft = {
 			"csv",
