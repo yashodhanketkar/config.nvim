@@ -34,35 +34,15 @@ M.servers = {
 		cmd = { "gopls", "serve" },
 		filetypes = { "go" },
 		root_markers = { "go.mod", "go.sum" },
+		settings = {
+			directoryFilters = {
+				"-**/fyne.io/fyne/v2",
+				"-**/fyne.io/v2",
+			},
+		},
 	},
 	marksman = {
 		filetypes = { "markdown" },
-	},
-	tsserver = {
-		cmd = { "typescript-language-server", "--stdio" },
-		init_options = {
-			hostInfo = "neovim",
-		},
-		filetypes = {
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
-		},
-		root_markers = {
-			"tsconfig.json",
-			"jsconfig.json",
-			"package.json",
-			".git",
-			"tsconfig.base.js",
-		},
-		settings = {
-			implicitProjectConfiguration = {
-				checkJs = true,
-			},
-		},
 	},
 	htmlserver = {
 		cmd = { "vscode-html-language-server", "--stdio" },
@@ -71,6 +51,15 @@ M.servers = {
 	cssserver = {
 		cmd = { "vscode-css-language-server", "--stdio" },
 		filetypes = { "css", "less", "tailwindcss" },
+		init_options = {
+			provideFormatter = true,
+		},
+		root_markers = { ".prettierrc" },
+		settings = {
+			css = { validate = true },
+			less = { validate = true },
+			scss = { validate = true },
+		},
 	},
 	texlab = {
 		cmd = { "texlab" },
@@ -172,43 +161,12 @@ M.servers = {
 	rust_analyzer = {
 		cmd = { "rust-analyzer" },
 		filetypes = { "rust" },
-		capabilities = {
-			commands = {
-				commands = { "rust-analyzer.showReferences", "rust-analyzer.runSingle", "rust-analyzer.debugSingle" },
-			},
-			serverStatusNotification = true,
-		},
 		settings = {
 			["rust-analyzer"] = {
-				lens = {
-					debug = {
-						enable = true,
-					},
-					enable = true,
-					implementations = {
-						enable = true,
-					},
-					references = {
-						adt = {
-							enable = true,
-						},
-						enumVariant = {
-							enable = true,
-						},
-						method = {
-							enable = true,
-						},
-						trait = {
-							enable = true,
-						},
-					},
-					run = {
-						enable = true,
-					},
-					updateTest = {
-						enable = true,
-					},
-				},
+				cargo = { allFeatures = true },
+				checkOnSave = { command = "clippy" },
+				lens = { enable = true },
+				diagnostics = { enable = true },
 			},
 		},
 	},
@@ -228,6 +186,29 @@ M.servers = {
 				completeFunctionCalls = true,
 				showTodos = true,
 			},
+		},
+	},
+	kulala = {
+		cmd = { "kulala-ls", "--stdio" },
+		ft = { "rest", "http" },
+	},
+	tsserver = {
+		cmd = { "typescript-language-server", "--stdio" },
+		init_options = { hostInfo = "neovim" },
+		filetypes = {
+			"typescript",
+			"typescriptreact",
+			"tsx",
+			"javascript",
+			"javascriptreact",
+			"jsx",
+		},
+		root_markers = {
+			"tsconfig.json",
+			"tsconfig.base.js",
+			"package.json",
+			"jsconfig.json",
+			".git",
 		},
 	},
 }

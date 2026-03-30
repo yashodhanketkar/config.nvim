@@ -1,6 +1,16 @@
 return {
 	{ "tpope/vim-fugitive", event = "VeryLazy" },
-	{ "sindrets/diffview.nvim", event = "VeryLazy" },
+	{
+		"sindrets/diffview.nvim",
+		event = "VeryLazy",
+		opts = {
+			view = {
+				merge_tool = {
+					layout = "diff3_mixed",
+				},
+			},
+		},
+	},
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },

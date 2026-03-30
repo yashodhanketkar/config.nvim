@@ -20,8 +20,10 @@ return {
 				"javascript",
 				-- web development
 				"typescript",
+				"tsx",
 				"html",
 				"css",
+				"http",
 				-- ORM, DB, and datatypes
 				"prisma",
 				"query",
@@ -77,6 +79,7 @@ return {
 			{ "rebelot/kanagawa.nvim", opts = { terminal_colors = true } },
 			{ "rose-pine/neovim", name = "rose-pine", opts = { variant = "auto", dark_variant = "moon" } },
 			{ "Mofiqul/vscode.nvim", name = "vscode" },
+			{ "neanias/everforest-nvim", name = "everforest" },
 		},
 		config = function()
 			require("themeui").setup({
@@ -89,6 +92,7 @@ return {
 						"tokyonight",
 						"rose-pine",
 						"vscode",
+						"everforest",
 					},
 				},
 			})

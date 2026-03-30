@@ -33,6 +33,7 @@ Keymaps are divided as
 | <kbd>C-l</kbd>                                   | Jump to right window                                  |
 | <kbd>leader</kbd> <kbd>leader</kbd> <kbd>n</kbd> | Clear text highlights                                 |
 | <kbd>y</kbd><kbd>c</kbd><kbd>c</kbd>             | Copy current line below and comment out original line |
+| <kbd>leader</kbd><kbd>T</kbd>                    | Open a terminal in the current directory              |
 
 ### Plugin specific keymaps [^1]
 
@@ -109,8 +110,6 @@ Keymaps are divided as
 | <kbd>leader</kbd> <kbd>l</kbd> <kbd>l</kbd>                           | Toggles limelight plugin                    |
 | **Markdown**                                                          |                                             |
 | <kbd>leader</kbd> <kbd>m</kbd> <kbd>p</kbd>                           | Toggle Markdown Preview                     |
-| **Mason**                                                             |                                             |
-| <kbd>leader</kbd> <kbd>c</kbd> <kbd>m</kbd>                           | Run Mason command                           |
 | **Neotree**                                                           |                                             |
 | <kbd>C-n</kbd>                                                        | Open Neotree on left                        |
 | <kbd>leader</kbd> <kbd>b</kbd> <kbd>f</kbd>                           | Shows Neotree buffers                       |

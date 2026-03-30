@@ -1,5 +1,4 @@
 return {
-	{ "tpope/vim-commentary", event = { "BufReadPost", "BufNewFile" } },
 	{
 		"saghen/blink.cmp",
 		event = { "BufReadPost", "BufNewFile" },
@@ -9,7 +8,7 @@ return {
 		opts = {
 			keymap = { preset = "super-tab" },
 			sources = {
-				default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+				default = { "lazydev", "lsp", "path", "buffer", "snippets" },
 				providers = {
 					lazydev = {
 						name = "LazyDev",
@@ -61,28 +60,39 @@ return {
 		"stevearc/conform.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
+			formatters = {
+				kulala = {
+					command = "kulala-fmt",
+					args = { "format", "$FILENAME" },
+					stdin = false,
+				},
+			},
 			formatters_by_ft = {
 				c = { "clang-format" },
 				cs = { "csharpier" },
 				dart = { "dart_format" },
 				dockerfile = { "dockerfmt" },
 				go = { "goimports", "golines" },
-				javascript = { "prettier" },
-				javascriptreact = { "prettier" },
-				json = { "prettier" },
+				javascript = { "prettier", "eslint_d" },
+				javascriptreact = { "prettier", "eslint_d" },
+				json = { "prettier", "eslint_d" },
 				lua = { "stylua" },
 				markdown = { "markdownfmt" },
 				python = { "isort", "black" },
 				rust = { "rustfmt" },
+				sh = { "shfmt" },
 				sql = { "sql_formatter" },
 				tex = { "tex-fmt" },
 				terraform = { "terraform_fmt" },
-				typescript = { "prettier" },
-				typescriptreact = { "prettier" },
+				tsx = { "prettier", "eslint_d" },
+				typescript = { "prettier", "eslint_d" },
+				typescriptreact = { "prettier", "eslint_d" },
 				xml = { "xmllint" },
+				rest = { "kulala" },
+				http = { "kulala" },
 			},
 			format_on_save = {
-				time_out = 500,
+				timeout_ms = 1000,
 				lsp_format = "fallback",
 			},
 		},
