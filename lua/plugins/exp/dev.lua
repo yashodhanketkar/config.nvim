@@ -1,47 +1,41 @@
-return {
-	{
-		"milisims/nvim-luaref",
-		event = "VeryLazy",
-	},
-	{
-		"folke/lua-dev.nvim",
-		event = "VeryLazy",
-	},
-	{
-		"folke/lazydev.nvim",
-		ft = "lua",
-		opts = {
-			library = {
-				{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
+vim.pack.add({ { src = "https://github.com/nvim-mini/mini.test" } })
+require("mini.test").setup()
+
+local function setup_flash()
+	local flash = require("flash")
+	flash.setup({
+		modes = {
+			char = {
+				enabled = false,
 			},
 		},
-	},
-	{
-		"nvim-mini/mini.test",
-		version = "*",
-		config = function()
-			require("mini.test").setup()
-		end,
-	},
-	{
-		"folke/flash.nvim",
-		event = { "BufReadPost", "BufNewFile" },
-		opts = {
-			modes = {
-				char = {
-					enabled = false,
-				},
-			},
+	})
+
+  -- stylua: ignore start
+  vim.keymap.set({ "n", "x", "o" }, "<leader>/", function () flash.jump() end, { desc="Flash search" })
+	-- stylua: ignore end
+end
+
+local function setup_lazydev()
+	require("lazydev").setup({
+		library = {
+			{ path = "${3rd}/luv/library", words = { "vim%.uv" } },
 		},
-		keys = {
-      -- stylua: ignore start
-      { "<leader>/", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash search" },
-			-- stylua: ignore end
-		},
-	},
-	{
-		"chentoast/marks.nvim",
-		event = { "BufReadPost", "BufNewFile" },
-		opts = {},
-	},
-}
+	})
+end
+
+vim.api.nvim_create_autocmd("BufRead", {
+	once = true,
+	callback = function()
+		vim.pack.add({
+			{ src = "https://github.com/milisims/nvim-luaref" },
+			{ src = "https://github.com/folke/lua-dev.nvim" },
+			{ src = "https://github.com/folke/lazydev.nvim" },
+			{ src = "https://github.com/folke/flash.nvim" },
+			{ src = "https://github.com/chentoast/marks.nvim" },
+		})
+
+		setup_flash()
+		setup_lazydev()
+	end,
+})

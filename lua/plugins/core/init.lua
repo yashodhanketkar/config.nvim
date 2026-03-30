@@ -1,0 +1,5 @@
+require("plugins.core.git")
+require("plugins.core.coding")
+require("plugins.core.navigation")
+require("plugins.core.ui")
+require("plugins.core.view")
