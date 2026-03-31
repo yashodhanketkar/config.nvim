@@ -1,40 +1,37 @@
-local set = vim.keymap.set
+local M = {}
 
-vim.pack.add({
-	{ src = "https://github.com/nvim-lua/plenary.nvim" },
-	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-	{ src = "https://github.com/MunifTanjim/nui.nvim" },
-	{ src = "https://github.com/stevearc/oil.nvim" },
-	{ src = "https://github.com/ThePrimeagen/harpoon", version = "harpoon2" },
-	{ src = "https://github.com/ibhagwan/fzf-lua" },
-})
-
-require("oil").setup({
-	default_file_explorer = true,
-	view_options = { show_hidden = true },
-})
+--- Oil file explorer configuration (primary file explorer)
+function M.setup_oil()
+	require("oil").setup({
+		default_file_explorer = true,
+		view_options = { show_hidden = true },
+	})
 
   -- stylua: ignore start
-	vim.keymap.set("n", "-",
-    "<cmd>Oil<CR>",
-    { desc = "Open parent directory", noremap = true, silent = true })
--- stylua: ignore end
+	vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory", noremap = true, silent = true })
+	-- stylua: ignore end
+end
 
-local harpoon = require("harpoon")
-harpoon.setup()
+--- Harpoon shortcuts configuration
+function M.setup_harpoon()
+	local harpoon = require("harpoon")
+	harpoon.setup()
 
   -- stylua: ignore start
-	set("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Add file to harpoon list" })
-	set("n", "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open harpoon list UI" })
-  set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Open item 1 from harpoon list"})
-  set("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Open item 2 from harpoon list"})
-  set("n", "<leader>h3", function() harpoon:list():select(3) end, { desc = "Open item 3 from harpoon list"})
-  set("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Open item 4 from harpoon list"})
--- stylua: ignore end
+	vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Add file to harpoon list" })
+	vim.keymap.set("n", "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open harpoon list UI" })
+  vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Open item 1 from harpoon list"})
+  vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Open item 2 from harpoon list"})
+  vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end, { desc = "Open item 3 from harpoon list"})
+  vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Open item 4 from harpoon list"})
+	-- stylua: ignore end
+end
 
-require("fzf-lua").setup({
-	winopts = { prview = { layout = "horizontal" } },
-})
+--- Fuzzy finder configuration
+function M.setup_fzf()
+	require("fzf-lua").setup({
+		winopts = { prview = { layout = "horizontal" } },
+	})
 
 	-- stylua: ignore start
 	vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<CR>", { desc = "Find Files" })
@@ -45,9 +42,11 @@ require("fzf-lua").setup({
   vim.keymap.set("n", "<leader>fd", "<cmd>FzfLua lsp_workspace_diagnostics<CR>", { desc = "Show lsp diagnostics" })
   vim.keymap.set("n", "<leader>fs", "<cmd>FzfLua lsp_document_symbols<CR>", { desc = "Show lsp symbols" })
   vim.keymap.set("n", "<leader>fc", ":FzfLua ", { desc = "Start FzfLua command line" })
--- stylua: ignore end
+	-- stylua: ignore end
+end
 
-local function setup_neotree()
+--- Neotree file explorer configuration (secondary file explorer)
+function M.setup_neotree()
 	require("neo-tree").setup({
     -- auto close
     -- stylua: ignore 
@@ -62,10 +61,4 @@ local function setup_neotree()
 	vim.keymap.set("n", "<leader>bf", "<cmd>Neotree buffers reveal float<cr>", { desc = "Shows Neotree buffers" })
 end
 
-vim.api.nvim_create_autocmd("BufRead", {
-	once = true,
-	callback = function()
-		vim.pack.add({ { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" } })
-		setup_neotree()
-	end,
-})
+return M

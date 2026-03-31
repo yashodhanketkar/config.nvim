@@ -1,4 +1,7 @@
-local function setup_blink()
+local M = {}
+
+--- Blink autocompletion configuration
+function M.setup_blink()
 	require("blink.cmp").setup({
 		keymap = { preset = "super-tab" },
 		sources = {
@@ -28,7 +31,8 @@ local function setup_blink()
 	})
 end
 
-local function setup_supermaven()
+--- Supermaven (AI suggestion) configuration
+function M.setup_supermaven()
 	require("supermaven-nvim").setup({
 		keymaps = {
 			accept_suggestion = "<C-l>",
@@ -55,7 +59,8 @@ local function setup_supermaven()
 	end, { desc = "Toggle supermaven-nvim" })
 end
 
-local function setup_conform()
+--- Conform and formatters configuration
+function M.setup_conform()
 	require("conform").setup({
 		formatters = {
 			kulala = {
@@ -95,18 +100,4 @@ local function setup_conform()
 	})
 end
 
-vim.api.nvim_create_autocmd("BufRead", {
-	once = true,
-	callback = function()
-		vim.pack.add({
-			{ src = "https://github.com/rafamadriz/friendly-snippets" },
-			{ src = "https://github.com/saghen/blink.cmp", version = "1.*" },
-			{ src = "https://github.com/supermaven-inc/supermaven-nvim" },
-			{ src = "https://github.com/stevearc/conform.nvim" },
-		})
-
-		setup_blink()
-		setup_supermaven()
-		setup_conform()
-	end,
-})
+return M
