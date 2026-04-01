@@ -1,11 +1,12 @@
 local specials = require("plugins.extra.specials")
 local colors = require("plugins.extra.colors")
 
-vim.api.nvim_create_autocmd("UIEnter", {
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "md", "markdown" },
 	once = true,
 	callback = function()
-		vim.pack.add({ { src = "https://github.com/junegunn/limelight.vim" } })
-		specials.setup_limelight()
+		vim.pack.add({ { src = "https://github.com/iamcco/markdown-preview.nvim" } })
+		specials.setup_markdown_preview()
 	end,
 })
 
@@ -48,5 +49,13 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.pack.add({ { src = "https://github.com/cameron-wags/rainbow_csv.nvim" } })
 		colors.setup_rainbow()
+	end,
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	once = true,
+	callback = function()
+		vim.pack.add({ { src = "https://github.com/junegunn/limelight.vim" } })
+		specials.setup_limelight()
 	end,
 })

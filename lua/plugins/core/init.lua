@@ -12,11 +12,15 @@ vim.pack.add({
 	{ src = "https://github.com/ibhagwan/fzf-lua" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/folke/noice.nvim" },
+	{ src = "https://github.com/chentoast/marks.nvim" },
 })
 
+-- Navigation
 navigation.setup_oil()
 navigation.setup_harpoon()
 navigation.setup_fzf()
+
+-- UI
 ui.setup_lualine()
 
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
@@ -34,6 +38,7 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 			{ src = "https://github.com/sindrets/diffview.nvim" },
 			-- navigation
 			{ src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
+			{ src = "https://github.com/folke/flash.nvim" },
 		})
 
 		-- coding
@@ -46,7 +51,9 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 		git.setup_gitsings()
 		git.setup_diffview()
 
-		-- navigation
+		-- navigation lazy loaded
 		navigation.setup_neotree()
+		navigation.setup_flash()
+		navigation.setup_marks()
 	end,
 })

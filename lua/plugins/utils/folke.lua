@@ -1,6 +1,5 @@
 local M = {}
 
---- Noice configuration
 function M.setup_noice()
 	require("noice").setup({ presets = { bottom_search = true, long_message_to_split = true } })
 	vim.keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<cr>", { desc = "Dismiss all notifications" })
@@ -22,8 +21,10 @@ end
 
 --- Todo list configuration
 function M.setup_todo()
+	require("todo-comments").setup()
 	vim.keymap.set("n", "<leader>tdf", "<cmd>TodoFzfLua<cr>", { desc = "Opens todo list with Lua_Fzf" })
-	vim.keymap.set("n", "<leader>tdl", "<cmd>TodoLocList<cr>", { desc = "Opens todo list in loc list" })
+	vim.keymap.set("n", "<leader>tdl", "<cmd>TodoLocList<cr>", { desc = "Opens todo list with loclist" })
+	vim.keymap.set("n", "<leader>tdq", "<cmd>TodoQuickFix<cr>", { desc = "Opens todo list with qucikfix" })
 end
 
 return M

@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "aerial.nvim": {
+      "rev": "645d108a5242ec7b378cbe643eb6d04d4223f034",
+      "src": "https://github.com/stevearc/aerial.nvim"
+    },
     "bats.vim": {
       "rev": "19eb3c5a05aaa889647af8107a4518b3fb4a4711",
       "src": "https://github.com/aliou/bats.vim"
@@ -77,6 +81,10 @@
     "lualine.nvim": {
       "rev": "47f91c416daef12db467145e16bed5bbfe00add8",
       "src": "https://github.com/nvim-lualine/lualine.nvim"
+    },
+    "markdown-preview.nvim": {
+      "rev": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee",
+      "src": "https://github.com/iamcco/markdown-preview.nvim"
     },
     "marks.nvim": {
       "rev": "f353e8c08c50f39e99a9ed474172df7eddd89b72",

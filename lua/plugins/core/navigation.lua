@@ -7,9 +7,7 @@ function M.setup_oil()
 		view_options = { show_hidden = true },
 	})
 
-  -- stylua: ignore start
 	vim.keymap.set("n", "-", "<cmd>Oil<CR>", { desc = "Open parent directory", noremap = true, silent = true })
-	-- stylua: ignore end
 end
 
 --- Harpoon shortcuts configuration
@@ -17,13 +15,17 @@ function M.setup_harpoon()
 	local harpoon = require("harpoon")
 	harpoon.setup()
 
-  -- stylua: ignore start
-	vim.keymap.set("n", "<leader>ha", function() harpoon:list():add() end, { desc = "Add file to harpoon list" })
-	vim.keymap.set("n", "<leader>hm", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Open harpoon list UI" })
-  vim.keymap.set("n", "<leader>h1", function() harpoon:list():select(1) end, { desc = "Open item 1 from harpoon list"})
-  vim.keymap.set("n", "<leader>h2", function() harpoon:list():select(2) end, { desc = "Open item 2 from harpoon list"})
-  vim.keymap.set("n", "<leader>h3", function() harpoon:list():select(3) end, { desc = "Open item 3 from harpoon list"})
-  vim.keymap.set("n", "<leader>h4", function() harpoon:list():select(4) end, { desc = "Open item 4 from harpoon list"})
+	--- @param lhs string
+	--- @param rhs function
+	--- @param desc string
+	local function map(lhs, rhs, desc)
+		vim.keymap.set("n", "<leader>h" .. lhs, rhs, { desc = desc })
+	end
+
+	-- stylua: ignore start
+	map("a", function() harpoon:list():add() end, "Add file")
+	map("m", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, "Harpoon list (UI)")
+  for i = 1, 4 do map(tostring(i), function() harpoon:list():select(i) end, "Select " .. i) end
 	-- stylua: ignore end
 end
 
@@ -59,6 +61,23 @@ function M.setup_neotree()
 
 	vim.keymap.set("n", "<C-n>", "<cmd>Neotree filesystem reveal left<cr>", { desc = "Open Neotree on left" })
 	vim.keymap.set("n", "<leader>bf", "<cmd>Neotree buffers reveal float<cr>", { desc = "Shows Neotree buffers" })
+end
+
+--- Flash search configuration
+function M.setup_flash()
+	local flash = require("flash")
+	flash.setup({ modes = { char = { enabled = false } } })
+
+  -- stylua: ignore start
+	vim.keymap.set({ "n", "x", "o" }, "<leader>/", function() flash.jump() end, { desc = "Flash search" })
+	-- stylua: ignore end
+end
+
+function M.setup_marks()
+	require("marks").setup({
+		excluded_filetypes = { "dashboard", "neo-tree", "noice", "oil", "startuptime", "toggleterm" },
+		excluded_buftypes = { "terminal", "quickfix", "prompt" },
+	})
 end
 
 return M

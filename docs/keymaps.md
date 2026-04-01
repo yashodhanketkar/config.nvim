@@ -69,7 +69,7 @@ Keymaps are divided as
 | <kbd>z</kbd> <kbd>R</kbd>                                             | Opens all folds                             |
 | <kbd>z</kbd> <kbd>M</kbd>                                             | Closes all folds                            |
 | **Fugitive**                                                          |                                             |
-| <kbd>leader</kbd> <kbd>G</kbd>                                        | Starts Git command in terminal              |
+| <kbd>leader</kbd> <kbd>G</kbd>                                        | Starts Git command                          |
 | **FzfLua**                                                            |                                             |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>f</kbd>                           | FzfLua list files                           |
 | <kbd>leader</kbd> <kbd>f</kbd> <kbd>g</kbd>                           | FzfLua list live grep                       |
@@ -89,9 +89,6 @@ Keymaps are divided as
 | <kbd>leader</kbd> <kbd>h</kbd> <kbd>2</kbd>                           | Selects second buffer from harpoons list    |
 | <kbd>leader</kbd> <kbd>h</kbd> <kbd>3</kbd>                           | Selects third buffer from harpoons list     |
 | <kbd>leader</kbd> <kbd>h</kbd> <kbd>4</kbd>                           | Selects fourth buffer from harpoons list    |
-| **Lazy**                                                              |                                             |
-| <kbd>leader</kbd> <kbd>c</kbd> <kbd>l</kbd>                           | Run Lazy command                            |
-| <kbd>leader</kbd> <kbd>l</kbd> <kbd>r</kbd>                           | Start reload plugins command                |
 | **LSP**                                                               |                                             |
 | <kbd>g</kbd> <kbd>R</kbd>                                             | Show LSP references                         |
 | <kbd>g</kbd> <kbd>d</kbd>                                             | Go to declaration                           |
@@ -129,8 +126,9 @@ Keymaps are divided as
 | <kbd>C-h</kbd>                                                        | Clear suggestion                            |
 | **Todo-comments**                                                     |                                             |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>f</kbd>              | Opens todo list with Lua_Fzf                |
-| <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>l</kbd>              | Opens todo list with Lua_Fzf                |
+| <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>l</kbd>              | Opens todo list with LockList               |
+| <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>q</kbd>              | Opens todo list with QuickFix               |
 | **Whichkey**                                                          |                                             |
-| <kbd>leader</kbd> <kbd>leader</kbd> <kbd>wk</kbd>                     | Lists available key sequences               |
+| <kbd>leader</kbd> <kbd>leader</kbd> <kbd>w</kbd> <kbd>k</kbd>         | Lists available key sequences               |
 
 [^1]: For default keymaps, refer to source code of plugins

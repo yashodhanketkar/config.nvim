@@ -14,6 +14,7 @@ local ensure_installed = {
 	"php",
 	"python",
 	"javascript",
+	"jsdoc",
 	-- web development
 	"typescript",
 	"tsx",

@@ -25,11 +25,8 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 			{ src = "https://github.com/milisims/nvim-luaref" },
 			{ src = "https://github.com/folke/lua-dev.nvim" },
 			{ src = "https://github.com/folke/lazydev.nvim" },
-			{ src = "https://github.com/folke/flash.nvim" },
-			{ src = "https://github.com/chentoast/marks.nvim" },
 		})
 
-		dev.setup_flash()
 		dev.setup_lazydev()
 	end,
 })

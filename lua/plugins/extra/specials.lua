@@ -1,8 +1,8 @@
 local M = {}
 
--- 		"https://github.com/iamcco/markdown-preview.nvim",
--- 	vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Toggle Markdown Preview" })
--- end,
+function M.setup_markdown_preview()
+	vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Toggle Markdown Preview" })
+end
 
 --- Limelight configuration
 function M.setup_limelight()

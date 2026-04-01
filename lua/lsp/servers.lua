@@ -210,6 +210,13 @@ M.servers = {
 			"jsconfig.json",
 			".git",
 		},
+		settings = {
+			javascript = {
+				implicitProjectConfiguration = {
+					checkJs = true,
+				},
+			},
+		},
 	},
 }
 
