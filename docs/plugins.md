@@ -8,125 +8,167 @@ Table Of Content
 
 -	[Plugins](#plugins)
 	-	[Table Of Content](#table-of-content)
+	-	[Treesitter](#treesitter)
 	-	[Core](#core)
-	-	[Coding](#coding)
-	-	[Git](#git)
-	-	[Navigation](#navigation)
-	-	[UI](#ui)
-	-	[View](#view)
+		-	[Coding](#coding)
+		-	[Git](#git)
+		-	[Navigation](#navigation)
+		-	[UI](#ui)
 	-	[Experimental](#experimental)
-	-	[Dev](#dev)
-	-	[Custom](#custom)
+		-	[Dev](#dev)
+		-	[Rest](#rest)
+		-	[Themeui](#themeui)
 	-	[Extra](#extra)
-	-	[Colors](#colors)
-	-	[CS](#cs)
-	-	[Specials](#specials)
+		-	[Colors](#colors)
+		-	[Specials](#specials)
 	-	[Utils](#utils)
-	-	[Autopair](#autopair)
-	-	[Debugger](#debugger)
-	-	[Folds](#folds)
-	-	[Folke](#folke)
-	-	[Surround](#surround)
+		-	[Debugger](#debugger)
+		-	[Folke](#folke)
+		-	[QOL](#qol)
+
+Treesitter
+----------
+
+Handles the syntax highlighting, indentation, and folding. Automatically installs the preselected parsers and enables treesitter for theme. New parsers can be added to the `ensure_installed` table as per needed.
+
+Currently the following parsers are installed:
+
+```lua
+ensure_installed = {
+    --- core
+    "vim", "vimdoc",
+    -- languages
+    "c", "cpp", "rust", "go", "java", "lua", "php", "python", "javascript", "jsdoc",
+    -- web development
+    "typescript", "tsx", "html", "css", "http",
+    -- ORM, DB, and datatypes
+    "prisma", "query", "sql", "xml", "json", "toml", "yaml", "markdown",
+    -- os related
+    "bash", "hyprlang", "kitty", "zsh",
+    -- server configuration
+    "make", "nginx", "rasi", "terraform",
+}
+```
+
+Please refer to this [link](https://github.com/tree-sitter/tree-sitter/wiki/List-of-parsers) for supported parsers.
 
 Core
 ----
 
+These are the core plugins. These plugins manages git, navigation, user interface and coding functionality.
+
 ### Coding
 
--	[Commentary](https://github.com/tpope/vim-commentary)
--	[blink.cmp](https://github.com/saghen/blink.cmp)
--	[supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)
--	[conform.nvim](https://github.com/stevearc/conform.nvim)
+Handles the autocompletion, AI suggestions, formatting.
+
+-	[Blink](https://github.com/saghen/blink.cmp)
+-	[Supermaven](https://github.com/supermaven-inc/supermaven-nvim)
+-	[Conform](https://github.com/stevearc/conform.nvim)
 
 ### Git
 
--	[fugitive](https://github.com/tpope/vim-fugitive)
--	[diffview.nvim](https://github.com/sindrets/diffview.nvim)
--	[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+Handles the git related functionality, such as signs, diff view, blame, and integration with neovim.
+
+-	[Fugitive](https://github.com/tpope/vim-fugitive)
+-	[Gitsigns](https://github.com/lewis6991/gitsigns.nvim)
+-	[Diffview](https://github.com/sindrets/diffview.nvim)
 
 ### Navigation
 
--	[oil.nvim](https://github.com/stevearc/oil.nvim)
--	[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
--	[harpoon](https://github.com/ThePrimeagen/harpoon) [^1]
--	[fzf-lua](https://github.com/ibhagwan/fzf-lua)
--	[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+Handles the navigation and file pickers.
+
+-	[Oil](https://github.com/stevearc/oil.nvim)
+-	[Harpoon](https://github.com/ThePrimeagen/harpoon) [^1]
+-	[Fzf-lua](https://github.com/ibhagwan/fzf-lua)
+-	[Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+-	[Flash](https://github.com/folke/flash.nvim)
+-	[Marks](https://github.com/chentoast/marks.nvim)
 
 ### UI
 
--	[nui.nvim](https://github.com/MunifTanjim/nui.nvim)
--	[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+Handles the user interface.
 
-### View
-
--	[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
--	[themeui.nvim](https://github.com/louriest/themeui.nvim) [^2] [^3]
+-	[Lualine](https://github.com/nvim-lualine/lualine.nvim)
 
 Experimental
 ------------
 
 ### Dev
 
--	[nvim-luaref](https://github.com/milisims/nvim-luaref)
--	[lua-dev.nvim](https://github.com/folke/lua-dev.nvim)
--	[lazydev.nvim](https://github.com/folke/lazydev.nvim)
--	[nvim-mini](https://github.com/nvim-mini/mini.test)
--	[flash.nvim](https://github.com/folke/flash.nvim)
--	[marks.nvim](https://github.com/chentoast/marks.nvim)
+Developement of plugins and nvim configuration.
 
-### Custom
+-	[mini.test](https://github.com/nvim-mini/mini.test)
+-	[luaref](https://github.com/milisims/nvim-luaref)
+-	[luadev](https://github.com/folke/lua-dev.nvim)
+-	[lazydev](https://github.com/folke/lazydev.nvim)
 
--	[customs](https://github.com/louriest)
+### Rest
+
+Integrated REST API clients
+
+-	[Kulala](https://github.com/milisims/kulala)
+
+### Themeui
+
+Custom theme plugin
+
+-	[Themeui](https://github.com/louriest/themeui.nvim) [^2] [^3]
 
 Extra
 -----
 
+Miscellaneous plugins for specials files.
+
 ### Colors
 
--	[nvim-colorizer](https://github.com/norcalli/nvim-colorizer.lua)
--	[rainbow_csv.nvim](https://github.com/cameron-wags/rainbow_csv.nvim)
+Live color and highlighting for csv, css, jsx, etc.
 
-### CS
-
--	[roslyn.nvim](https://github.com/seblyng/roslyn.nvim)
--	[easy-dotnet.nvim](https://github.com/GustavEikaas/easy-dotnet.nvim)
+-	[Rainbow_csv](https://github.com/cameron-wags/rainbow_csv.nvim)
+-	[Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 
 ### Specials
 
--	[bats.vim](https://github.com/aliou/bats.vim)
--	[limelight.vim](https://github.com/junegunn/limelight.vim)
--	[markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
+Handles specialize filetypes
+
+-	[Limelight](https://github.com/junegunn/limelight.vim)
+-	[Markdown preview](https://github.com/iamcco/markdown-preview.nvim)
+-	[Bats](https://github.com/aliou/bats.vim)
 
 Utils
 -----
 
-### Autopair
-
--	[nvim-autopairs](https://github.com/windwp/nvim-autopairs)
--	[nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
+QOL and utilities plugins.
 
 ### Debugger
 
--	[nvim-dap](https://github.com/mfussenegger/nvim-dap)
+Debugger configuration (currently configured for go)
 
-### Folds
-
--	[nvim-ufo](https://github.com/kevinhwang91/nvim-ufo)
+-	[Dap](https://github.com/mfussenegger/nvim-dap)
+-	[Dap-go](https://github.com/leoluz/nvim-dap-go)
+-	[Dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 
 ### Folke
 
--	[which-key.nvim](https://github.com/folke/which-key.nvim)
--	[todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
--	[noice.nvim](https://github.com/folke/noice.nvim)
--	[snacks.nvim](https://github.com/folke/snacks.nvim)
+Uncategorized plugins from folke
 
-### Surround
+-	[Which-key](https://github.com/folke/which-key.nvim)
+-	[Todo-comments](https://github.com/folke/todo-comments.nvim)
+-	[Noice](https://github.com/folke/noice.nvim)
+-	[Snacks](https://github.com/folke/snacks.nvim)
 
--	[vim-surround](https://github.com/tpope/vim-surround)
+### QOL
+
+Configurations of QOL plugins
+
+-	[Autopairs](https://github.com/windwp/nvim-autopairs)
+-	[Colorscheme](https://github.com/windwp/nvim-ts-autotag)
+-	[Ufo](https://github.com/kevinhwang91/nvim-ufo)
 -	[mini.ai](https://github.com/echasnovski/mini.ai)
+
+Refer to plugins documentation for dependencies and configurations.
 
 [^1]: harpoon2 branch
 
-[^2]: 0.2.0 branch
+[^2]: Currently using local themeui
 
-[^3]: themes used [dracula](https://github.com/Mofiqul/dracula.nvim), [catppuccin](https://github.com/catppuccin/nvim), [tokyonight](https://github.com/folke/tokyonight.nvim), [gruvbox](https://github.com/ellisonleao/gruvbox.nvim), [kanagawa](https://github.com/rebelot/kanagawa.nvim), [rose-pine](https://github.com/rose-pine/neovim), [vscode](https://github.com/Mofiqul/vscode.nvim)
+[^3]: 0.2.0 branch

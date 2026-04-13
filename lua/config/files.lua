@@ -14,25 +14,19 @@ local filetype_settings = {
 	end,
 }
 
-local function setup_files()
-	vim.filetype.add({
-		extension = {
-			tf = "terraform",
-			sh = "bash",
-			tsx = "tsx",
-		},
+vim.filetype.add({
+	extension = {
+		tf = "terraform",
+		sh = "bash",
+		tsx = "tsx",
+	},
+})
+
+local group = vim.api.nvim_create_augroup("CustomFileTypes", { clear = true })
+for filetype, fn in pairs(filetype_settings) do
+	vim.api.nvim_create_autocmd("FileType", {
+		group = group,
+		pattern = filetype,
+		callback = fn,
 	})
-
-	local group = vim.api.nvim_create_augroup("CustomFileTypes", { clear = true })
-	for filetype, fn in pairs(filetype_settings) do
-		vim.api.nvim_create_autocmd("FileType", {
-			group = group,
-			pattern = filetype,
-			callback = fn,
-		})
-	end
 end
-
-return {
-	setup = setup_files,
-}

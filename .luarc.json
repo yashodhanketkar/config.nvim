@@ -1,4 +1,4 @@
 {
-  "diagnostics.globals": ["Snacks", "menu"]
+  "runtime.version": "LuaJIT",
+  "diagnostics.globals": ["Snacks", "menu", "vim"]
 }
-

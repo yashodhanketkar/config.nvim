@@ -1,37 +1,14 @@
-return {
-	{
-		"aliou/bats.vim",
-		event = { "BufReadPost", "BufNewFile" },
-	},
-	{
-		"junegunn/limelight.vim",
-		event = { "BufReadPost", "BufNewFile" },
-		keys = {
-			{ "<leader>ll", "<cmd>Limelight!!<cr>", desc = "Toggle limelight" },
-		},
-		{
-			"iamcco/markdown-preview.nvim",
-			event = { "BufReadPost", "BufNewFile" },
-			cmd = {
-				"MarkdownPreviewToggle",
-				"MarkdownPreview",
-				"MarkdownPreviewStop",
-			},
-			-- build = function()
-			-- 	vim.fn["mkdp#util#install"]()
-			-- end,
-			build = "cd app && npm install",
-			init = function()
-				vim.g.mkdp_filetypes = {
-					"markdown",
-				}
-			end,
-			ft = {
-				"markdown",
-			},
-			keys = {
-				{ "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
-			},
-		},
-	},
-}
+local M = {}
+
+function M.setup_markdown_preview()
+	vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Toggle Markdown Preview" })
+end
+
+--- Limelight configuration
+function M.setup_limelight()
+	vim.keymap.set("n", "<leader>ll", "<cmd>Limelight!!<cr>", { desc = "Toggle limelight" })
+	vim.keymap.set("n", "<leader>le", ":Limelight 0.", { desc = "Limelight command" })
+	vim.keymap.set("n", "<leader>ld", "<cmd>Limelight!<cr>", { desc = "Disable limelight" })
+end
+
+return M
