@@ -16,7 +16,7 @@ vim.lsp.config("*", {
 
 -- calls servers and their configurations
 -- enable server after configurations
-for server, config in pairs(lsps.servers) do
+for server, config in pairs(lsps.configs) do
 	vim.lsp.config(server, config)
 	vim.lsp.enable(server)
 end
