@@ -64,6 +64,7 @@ Handles the autocompletion, AI suggestions, formatting.
 -	[Blink](https://github.com/saghen/blink.cmp)
 -	[Supermaven](https://github.com/supermaven-inc/supermaven-nvim)
 -	[Conform](https://github.com/stevearc/conform.nvim)
+-	[LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 
 ### Git
 
@@ -83,6 +84,7 @@ Handles the navigation and file pickers.
 -	[Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 -	[Flash](https://github.com/folke/flash.nvim)
 -	[Marks](https://github.com/chentoast/marks.nvim)
+-	[Aerial](https://github.com/stevearc/aerial.nvim)
 
 ### UI
 
@@ -113,6 +115,12 @@ Integrated REST API clients
 Custom theme plugin
 
 -	[Themeui](https://github.com/louriest/themeui.nvim) [^2] [^3]
+
+### Transparent
+
+Transparency plugin
+
+-	[Transparent](https://github.com/xiyaowong/transparent.nvim)
 
 Extra
 -----
@@ -161,7 +169,7 @@ Uncategorized plugins from folke
 Configurations of QOL plugins
 
 -	[Autopairs](https://github.com/windwp/nvim-autopairs)
--	[Colorscheme](https://github.com/windwp/nvim-ts-autotag)
+-	[Autotags](https://github.com/windwp/nvim-ts-autotag)
 -	[Ufo](https://github.com/kevinhwang91/nvim-ufo)
 -	[mini.ai](https://github.com/echasnovski/mini.ai)
 

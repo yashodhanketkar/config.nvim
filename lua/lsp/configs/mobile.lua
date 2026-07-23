@@ -1,5 +1,7 @@
 local M = {}
 
+local lombok_path = vim.fn.expand("~/.local/share/java/lombok.jar")
+
 M.configs = {
 	dartls = {
 		cmd = { "dart", "language-server", "--protocol=lsp" },
@@ -20,8 +22,11 @@ M.configs = {
 		},
 	},
 	jdtls = {
+		cmd = {
+			"jdtls",
+			"--jvm-arg=-javaagent:" .. lombok_path,
+		},
 		filetypes = { "java" },
-		cmd = { "jdtls" },
 		root_markers = { "gradlew", ".git", "mvnw" },
 		settings = {
 			java = {},

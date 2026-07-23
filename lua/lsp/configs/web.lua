@@ -41,6 +41,52 @@ M.configs = {
 			".git",
 		},
 	},
+	svelteserver = {
+		cmd = { "svelteserver", "--stdio" },
+		filetypes = { "svelte" },
+		root_markers = { "tsconfig.json", "package.json", ".git" },
+		settings = {
+			{
+				typescript = {
+					inlayHints = {
+						enumMemberValues = {
+							enabled = true,
+						},
+						functionLikeReturnTypes = {
+							enabled = true,
+						},
+						parameterNames = {
+							enabled = "literals",
+							suppressWhenArgumentMatchesName = true,
+						},
+						parameterTypes = {
+							enabled = true,
+						},
+						propertyDeclarationTypes = {
+							enabled = true,
+						},
+						variableTypes = {
+							enabled = true,
+						},
+					},
+				},
+			},
+		},
+	},
+	-- vtsls = {
+	-- 	cmd = { "vtsls", "--stdio" },
+	-- 	filetypes = {
+	-- 		"typescript",
+	-- 		"typescriptreact",
+	-- 		"tsx",
+	-- 		"javascript",
+	-- 		"javascriptreact",
+	-- 		"jsx",
+	-- 	},
+	-- 	init_options = {
+	-- 		hostInfo = "neovim",
+	-- 	},
+	-- },
 }
 
 return M

@@ -13,6 +13,6 @@ vim.keymap.set("n", "<leader><leader>wk", "<cmd>WhichKey<cr>", { desc = "Run Whi
 vim.keymap.set("n", "ycc", "yygccp", { remap = true, desc = "Copy current line below and comment out original line", })
 vim.keymap.set("n", "<leader>T", "<cmd>belowright terminal<cr>", { desc = "Open a terminal in the current directory" })
 vim.keymap.set("t", "<ESC><ESC>", "<C-\\><C-n>", { remap = true, desc = "Escape from terminal mode" })
-vim.keymap.set('v', "<", "<gv", { desc = "Keeps selection"})
-vim.keymap.set('v', ">", ">gv", { desc = "Keeps selection"})
+vim.keymap.set("v", "<", "<gv", { desc = "Keeps selection" })
+vim.keymap.set("v", ">", ">gv", { desc = "Keeps selection" })
 -- stylua: ignore end

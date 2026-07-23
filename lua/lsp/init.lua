@@ -20,3 +20,11 @@ for server, config in pairs(lsps.configs) do
 	vim.lsp.config(server, config)
 	vim.lsp.enable(server)
 end
+
+-- handles lsp start docker-compose.yaml file
+vim.api.nvim_create_autocmd("BufReadPre", {
+	pattern = "docker-compose.yaml",
+	callback = function()
+		vim.lsp.start(lsps.configs.dockercls)
+	end,
+})

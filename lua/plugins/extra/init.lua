@@ -1,6 +1,8 @@
 local specials = require("plugins.extra.specials")
 local colors = require("plugins.extra.colors")
 
+vim.pack.add({ { src = "https://github.com/elkowar/yuck.vim" } })
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "md", "markdown" },
 	once = true,
@@ -22,6 +24,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	once = true,
 	pattern = {
 		"css",
+		"scss",
 		"jsx",
 		"javascript",
 		"javascriptreact",

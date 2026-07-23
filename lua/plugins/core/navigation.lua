@@ -47,6 +47,14 @@ function M.setup_fzf()
 	-- stylua: ignore end
 end
 
+--- Setup marks plugin
+function M.setup_marks()
+	require("marks").setup({
+		excluded_filetypes = { "dashboard", "neo-tree", "noice", "oil", "startuptime", "toggleterm" },
+		excluded_buftypes = { "terminal", "quickfix", "prompt" },
+	})
+end
+
 --- Neotree file explorer configuration (secondary file explorer)
 function M.setup_neotree()
 	require("neo-tree").setup({
@@ -73,11 +81,16 @@ function M.setup_flash()
 	-- stylua: ignore end
 end
 
-function M.setup_marks()
-	require("marks").setup({
-		excluded_filetypes = { "dashboard", "neo-tree", "noice", "oil", "startuptime", "toggleterm" },
-		excluded_buftypes = { "terminal", "quickfix", "prompt" },
+--- Setup symbols navigation
+function M.setup_aerial()
+	require("aerial").setup({
+		on_attach = function(bufnr)
+			vim.keymap.set("n", "{", "<cmd>AerialPrev<CR>", { buffer = bufnr })
+			vim.keymap.set("n", "}", "<cmd>AerialNext<CR>", { buffer = bufnr })
+		end,
 	})
+
+	vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle<CR>", { desc = "Aerial: Toggle", silent = true })
 end
 
 return M

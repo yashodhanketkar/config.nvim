@@ -61,4 +61,4 @@ Refer to [keymaps.md](./docs/keymaps.md)
 License
 -------
 
-[MIT](LICENSE)
+This project is licensed under the GPLv3 License - see the [LICENSE](./LICENSE) file for details

@@ -13,6 +13,9 @@ function M.setup_autos()
 			enable_rename = true,
 			enable_close_on_slash = false,
 		},
+		aliases = {
+			["tsx"] = "typescriptreact",
+		},
 	})
 end
 

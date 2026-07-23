@@ -6,9 +6,9 @@ M.configs = {
 		ignoredRootPaths = { "~" },
 		filetypes = { "sh", "zsh", "bash" },
 	},
-	docker = {
-		cmd = { "docker-language-server", "start", "--stdio" },
-		filetypes = { "dockerfile", "yaml.docker-compose" },
+	dockercls = {
+		cmd = { "docker-compose-langserver", "--stdio" },
+		filetypes = { "dockerfile", "yaml.docker-compose", "docker-compose.yaml" },
 		root_markers = {
 			"Dockerfile",
 			"docker-compose.yaml",

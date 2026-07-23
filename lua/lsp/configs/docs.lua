@@ -4,12 +4,10 @@ M.configs = {
 	luals = {
 		cmd = { "lua-language-server" },
 		filetypes = { "lua" },
-		settings = {
-			Lua = {
-				telemetry = {
-					enable = false,
-				},
-			},
+		root_markers = {
+			{ ".emmyrc.json", ".luarc.json", ".luarc.jsonc" },
+			{ ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml" },
+			{ ".git" },
 		},
 	},
 	marksman = {

@@ -10,7 +10,6 @@ function M.setup_themeui()
 				"everforest",
 				"gruvbox",
 				"kanagawa",
-				"rosepine",
 				"tokyonight",
 				"vscode",
 			},
