@@ -1,6 +1,14 @@
 -- setup LSP related keybindings
 require("lsp.keys")
-local lsps = require("lsp.servers")
+local servers = require("lsp.servers")
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		vim.pack.add({
+			"https://github.com/neovim/nvim-lspconfig",
+		})
+	end,
+})
 
 -- root configuration
 vim.lsp.config("*", {
@@ -14,9 +22,19 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 
--- calls servers and their configurations
--- enable server after configurations
-for server, config in pairs(lsps.configs) do
-	vim.lsp.config(server, config)
+-- setup lsp servers
+for server, config in pairs(servers) do
+	if next(config) ~= nil then
+		vim.lsp.config(server, config)
+	end
+
 	vim.lsp.enable(server)
 end
+
+-- handles lsp start docker-compose.yaml file
+vim.api.nvim_create_autocmd("BufReadPre", {
+	pattern = "docker-compose.yaml",
+	callback = function()
+		vim.lsp.start(servers.docker_compose_language_service)
+	end,
+})

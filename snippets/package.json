@@ -1,0 +1,23 @@
+{
+  "name": "custom-snippets",
+  "description": "Custom snippets for nvim",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "global",
+          "all"
+        ],
+        "path": "./snips/all.json"
+      },
+      {
+        "language": "go",
+        "path": "./snips/go.json"
+      },
+      {
+        "language": "html",
+        "path": "./snips/html.json"
+      }
+    ]
+  }
+}

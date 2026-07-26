@@ -13,6 +13,8 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 	{ src = "https://github.com/folke/noice.nvim" },
 	{ src = "https://github.com/chentoast/marks.nvim" },
+	{ src = "https://github.com/folke/flash.nvim" },
+	{ src = "https://github.com/stevearc/aerial.nvim" },
 })
 
 -- Navigation
@@ -32,19 +34,20 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 			{ src = "https://github.com/saghen/blink.cmp", version = "v1" },
 			{ src = "https://github.com/supermaven-inc/supermaven-nvim" },
 			{ src = "https://github.com/stevearc/conform.nvim" },
+			{ src = "https://github.com/L3MON4D3/LuaSnip" },
 			-- git
 			{ src = "https://github.com/tpope/vim-fugitive" },
 			{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 			{ src = "https://github.com/sindrets/diffview.nvim" },
 			-- navigation
 			{ src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
-			{ src = "https://github.com/folke/flash.nvim" },
 		})
 
 		-- coding
 		coding.setup_blink()
 		coding.setup_supermaven()
 		coding.setup_conform()
+		coding.setup_snippets()
 
 		-- git
 		git.setup_fugitive()
@@ -53,7 +56,8 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile" }, {
 
 		-- navigation lazy loaded
 		navigation.setup_neotree()
-		navigation.setup_flash()
 		navigation.setup_marks()
+		navigation.setup_flash()
+		navigation.setup_aerial()
 	end,
 })

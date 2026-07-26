@@ -1,0 +1,60 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": ["func main() {", "\t$0", "}"]
+  },
+  "func": {
+    "prefix": "func",
+    "body": ["func ${1:name}(${2}) ${3:error} {", "\t$0", "}"]
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": ["type ${1:Name} struct {", "\t$0", "}"]
+  },
+  "interface": {
+    "prefix": "interface",
+    "body": ["type ${1:Name} interface {", "\t${2:MethodName}(${3}) ${4}", "}"]
+  },
+  "json": {
+    "prefix": "json",
+    "body": " `json:\"${1:key}\"`"
+  },
+  "forr": {
+    "prefix": "forr",
+    "body": ["for ${1:_}, ${2:v} := range ${3:items} {", "\t$0", "}"]
+  },
+  "httph": {
+    "prefix": "httph",
+    "body": [
+      "func ${1:handlerName}(w http.ResponseWriter, r *http.Request) {",
+      "\t$0",
+      "}"
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "body": ["func Test${1:Name}(t *testing.T) {", "\t$0", "}"]
+  },
+  "ttest": {
+    "prefix": "ttest",
+    "body": [
+      "tests := []struct {",
+      "\tname string",
+      "\t${1:// fields}",
+      "}{",
+      "\t{",
+      "\t\tname: \"${2:test case}\",",
+      "\t},",
+      "}",
+      "for _, tt := range tests {",
+      "\tt.Run(tt.name, func(t *testing.T) {",
+      "\t\t$0",
+      "\t})",
+      "}"
+    ]
+  },
+  "errnil": {
+    "prefix": "errnil",
+    "body": ["if err != nil {", "\t${1:return err}", "}"]
+  }
+}

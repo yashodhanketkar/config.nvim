@@ -15,7 +15,7 @@ function M.setup_blink()
 			},
 		},
 		fuzzy = {
-			implementation = "lua",
+			implementation = "prefer_rust",
 		},
 		appearance = { use_nvim_cmp_as_default = true, nerd_font_variant = "mono" },
 		completion = {
@@ -27,6 +27,9 @@ function M.setup_blink()
 					},
 				},
 			},
+		},
+		snippets = {
+			preset = "luasnip",
 		},
 	})
 end
@@ -97,6 +100,24 @@ function M.setup_conform()
 			timeout_ms = 1000,
 			lsp_format = "fallback",
 		},
+	})
+end
+
+-- LuaSnip Snippets configuration
+function M.setup_snippets()
+	local ls = require("luasnip")
+
+	ls.add_snippets("all", {
+		ls.snippet(
+			"udatetime",
+			ls.function_node(function()
+				return os.date("%Y-%m-%dT%H:%M:%S") .. "." .. math.floor(vim.loop.hrtime() / 1e6 % 1000) .. "Z"
+			end)
+		),
+	})
+
+	require("luasnip.loaders.from_vscode").lazy_load({
+		paths = { vim.fn.stdpath("config") .. "/snippets" },
 	})
 end
 

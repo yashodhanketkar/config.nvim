@@ -1,4 +1,12 @@
 {
+  "$schema": "https://githubusercontent.com",
   "runtime.version": "LuaJIT",
-  "diagnostics.globals": ["Snacks", "menu", "vim"]
+  "diagnostics.globals": ["Snacks", "menu", "vim"],
+  "workspace.library": [
+    "$VIMRUNTIME/lua",
+    "${3rd}/luv/library",
+    "${3rd}/busted/library"
+  ],
+  "workspace.checkThirdParty": false,
+  "telemetry.enable": false
 }

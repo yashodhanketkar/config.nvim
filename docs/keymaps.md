@@ -47,6 +47,8 @@ Keymaps are divided as
 | <kbd>C-e</kbd>                                                        | Show completion suggestion                  |
 | <kbd>C-q</kbd>                                                        | Close completion window                     |
 | <kbd>Tab</kbd>                                                        | Confirm selection                           |
+| **Autocomplete (blink-cmp)**                                          |                                             |
+| <kbd>leader</kbd> <kbd>a</kbd>                                        | Toggle aerial symbol table                  |
 | **Colorizer**                                                         |                                             |
 | <kbd>leader</kbd><kbd>t</kbd><kbd>c</kbd>                             | Toggle colorizer                            |
 | **Debugger**                                                          |                                             |
@@ -124,6 +126,8 @@ Keymaps are divided as
 | <kbd>C-l</kbd>                                                        | Accept suggestion                           |
 | <kbd>C-j</kbd>                                                        | Accept word                                 |
 | <kbd>C-h</kbd>                                                        | Clear suggestion                            |
+| **Transparent**                                                       |                                             |
+| <kbd>leader</kbd> <kbd>b</kbd> <kbd>t</kbd>                           | Toggle transparency                         |
 | **Todo-comments**                                                     |                                             |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>f</kbd>              | Opens todo list with Lua_Fzf                |
 | <kbd>leader</kbd> <kbd>t</kbd> <kbd>d</kbd> <kbd>l</kbd>              | Opens todo list with LockList               |
