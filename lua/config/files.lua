@@ -24,7 +24,7 @@ vim.filetype.add({
 	extension = {
 		tf = "terraform",
 		sh = "bash",
-		tsx = "tsx",
+		tsx = "typescriptreact",
 		jsonc = "json",
 	},
 })

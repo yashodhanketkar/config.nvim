@@ -15,6 +15,7 @@ local ensure_installed = {
 	"php",
 	"python",
 	"javascript",
+	"toml",
 	"yuck",
 	-- web development
 	"css",

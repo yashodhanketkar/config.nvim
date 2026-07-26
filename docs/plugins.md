@@ -9,6 +9,7 @@ Table Of Content
 -	[Plugins](#plugins)
 	-	[Table Of Content](#table-of-content)
 	-	[Treesitter](#treesitter)
+	-	[LSP](#lsp)
 	-	[Core](#core)
 		-	[Coding](#coding)
 		-	[Git](#git)
@@ -51,6 +52,13 @@ ensure_installed = {
 ```
 
 Please refer to this [link](https://github.com/tree-sitter/tree-sitter/wiki/List-of-parsers) for supported parsers.
+
+LSP
+---
+
+Fetches common lsp server configurations.
+
+-	[Lspconfig](https://github.com/neovim/nvim-lspconfig)
 
 Core
 ----
